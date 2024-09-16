@@ -1,6 +1,6 @@
 # meteor-song
 
-![Aperçu d'une interface cartographique représentant les météorites trouvées sur Terre.](../conception/prototype/previews/preview_0.1_SPA%203.jpg)
+![Aperçu d'une interface web cartographique représentant les météorites trouvées sur Terre.](./img/preview_0.1_SPA%203.jpg)
 
 >[!WARNING]
 > Ce projet est en cours de développement. Une première version sera disponible en ligne d'ici le 1er octobre.
