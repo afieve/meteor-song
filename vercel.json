@@ -1,0 +1,27 @@
+{
+    "version": 2,
+    "builds": [
+        {
+            "src": "client",
+            "use": "@vercel/static-build",
+            "outputDirectory": "out"
+        },
+        {
+            "src": "server",
+            "use": "@vercel/node",
+            "config": {
+                "runtime": "nodejs16.x"
+            }
+        }
+    ],
+    "routes": [
+        {
+            "src": "/api/(.*)",
+            "dest": "/server/api/$1"
+        },
+        {
+            "src": "/(.*)",
+            "dest": "/client/out/$1"
+        }
+    ]
+}

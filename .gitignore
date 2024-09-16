@@ -1,0 +1,22 @@
+legacy/
+.vercel
+
+# node_modules
+server/node_modules/
+client/node_modules/
+
+# production files
+server/dist/
+client/dist/
+
+# test data
+data/
+
+# test images
+img/
+
+# environnement variables
+*.env
+
+# other clients app
+vanilla-client/
