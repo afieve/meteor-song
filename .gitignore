@@ -14,7 +14,7 @@ data/
 
 # test images
 img/*
-!img/preview_0.1_SPA 3.jpg
+!img/preview_0.1_SPA3.jpg
 
 # environnement variables
 *.env
