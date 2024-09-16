@@ -11,11 +11,25 @@ const app = express();
 
 const PORT: number = parseInt(process.env.SERVER_PORT);
 
-app.use(cors({"origin": process.env.CLIENT_APP_ORIGIN_URL}));
+app.use(cors({
+    origin: process.env.CLIENT_APP_ORIGIN_URL
+}));
 app.use(helmet());
 
+// Middleware CORS custom
+app.use((req, res, next) => {
+    const allowedOrigin = process.env.CLIENT_APP_ORIGIN_URL;
+    const origin = req.headers.origin;
+    console.log('request.headers.origin:', origin);
+    if (origin && origin !== allowedOrigin) {
+        return res.status(403).send("Forbidden: Invalid origin.");
+    } else if (!origin) {
+        return res.status(403).send("Forbidden: No origin specified.")
 
-
+    }
+    next();
+    
+});
 
 mongoose.connect(process.env.MONGODB_CONNECTION_STRING.toString());
 const db = mongoose.connection;
@@ -35,7 +49,6 @@ app.post('/ml', async (req, res) => {
     res.send(docs);
 });
 
-
 /*
 *   # Prevent open redirects
 *   If the user gets redirected here by some malevolant program, this middleware redirects him to the URL he was originally trying to access.
@@ -54,9 +67,12 @@ app.use((req, res) => {
 });
 */
 
+
+
 app.use((req, res, next) => {
     // console.log({ req: req, res: res, next: next });
     res.status(404).send("<h1>Error 404</h1>");
+    next();
 });
 
 app.listen(PORT, () => {
