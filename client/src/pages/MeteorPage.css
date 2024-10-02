@@ -1,0 +1,30 @@
+.MeteorPage {
+    display: flex;
+    flex-direction: column;
+
+    /* En tant qu'enfant de .Page */
+    flex-grow: 1;
+}
+
+.MeteorPage div#map {
+    background-color: rgb(0, 1, 3);
+    /* En tant qu'en de .MeteorPage */
+    flex-grow: 1;
+}
+
+#left-modals-container {
+    display: flex;
+    flex-direction: column;
+    z-index: 500;
+    position: absolute;
+    top: 50px;
+    gap: 32px;
+    max-width: 533px;
+    /* border: 1px dashed orangered; */
+    /* width: 428px; */
+    /* background-color: seagreen; */
+    color: #E0E0E0;
+    width: fit-content;
+    font-family: 'Instrument Sans', sans-serif;
+    padding: 20px 24px;
+}

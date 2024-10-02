@@ -1,9 +1,9 @@
 export interface IMeteoriteClassificationSchema {
     name: {
-        eng: string;
-        fr: string;
+        eng?: string;
+        fr?: string;
     }
-    abbrvs: string[];
-    mindatID: number;
-    children: IMeteoriteClassificationSchema[];
+    recclass?: string[];
+    mindatID?: number;
+    children?: IMeteoriteClassificationSchema[];
 }

@@ -1,0 +1,28 @@
+.custom-marker-icon {
+    background-color: brown;
+}
+.custom-marker-cluster {
+    background-color: #090909;
+    /* background-color: #010101; */
+    
+    /* opacity: 0.2; */
+    border-radius: 100%;
+    text-align: center;
+    border: 1px dashed #474747;
+}
+.custom-marker-cluster span {
+    margin-top: 8px;
+    display: block;
+    color: #ababab;
+    /* color: #fcfcfc; */
+    font-weight: 500;
+}
+.leaflet-popup-content-wrapper, .leaflet-popup-tip {
+    background-color: #0D0D0D;
+    box-shadow: 0px 0px 2px 0px #E0E0E0;
+    /* border-bottom: 1px solid white; */
+} 
+.marker-popup {
+    color: #E0E0E0;
+    margin: 0;
+}

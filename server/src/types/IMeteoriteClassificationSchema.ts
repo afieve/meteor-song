@@ -3,7 +3,7 @@ export interface MeteoriteClassification {
         eng: string;
         fr: string;
     }
-    abbrvs: string[];
+    classCodes: string[];
     mindatID: number;
     children: MeteoriteClassification[];
 }

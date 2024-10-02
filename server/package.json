@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npx tsc && node dist/index.js"
+    "start": "npx tsc && node dist/src/index.js | pino-pretty"
   },
   "author": "",
   "license": "ISC",
@@ -19,13 +19,20 @@
     "typescript-eslint": "^8.5.0"
   },
   "dependencies": {
+    "@types/chroma-js": "^2.4.4",
     "@types/express": "^4.17.21",
+    "@types/geojson": "^7946.0.14",
     "@types/mongoose": "^5.11.96",
     "@types/node": "^22.5.5",
+    "chroma-js": "^3.1.1",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.21.0",
     "helmet": "^7.1.0",
-    "mongoose": "^8.6.2"
+    "mongoose": "^8.6.2",
+    "pino": "^9.4.0",
+    "progress": "^2.0.3",
+    "pug": "^3.0.3",
+    "uuid": "^10.0.0"
   }
 }

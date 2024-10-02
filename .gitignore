@@ -2,22 +2,28 @@ legacy/
 .vercel
 
 # node_modules
-server/node_modules/
-client/node_modules/
+node_modules/
 
 # production files
-server/dist/
-client/dist/
+/server/dist/
+/client/dist/
 
 # test data
-data/
+/data/
 
-# test images
+# server data saves
+server/data/saves/
+
+# exclude: test images
 img/*
+# include: github preview image
 !img/preview_0.1_SPA 3.jpg
 
 # environnement variables
 *.env
 
-# other clients app
+# other client apps
 vanilla-client/
+
+# various obselete files
+/client/src/components/ClassificationFilterItem/

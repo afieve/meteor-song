@@ -1,0 +1,120 @@
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    /* align-content: center; */
+    height: 5vh;
+    /* border: 1px solid black; */
+    width: 100%;
+    z-index: 99;
+}
+
+header .header-left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 24px;
+    padding: 12px;
+    /* color: var(--dark-theme-text-color); */
+    /* background-color: rgb(218, 1%, 241); */
+}
+
+header .header-left svg {}
+
+header .header-left * {
+    /* background-color: palevioletred; */
+}
+
+header .header-right {
+    margin: 8px;
+    /* background-color: palevioletred; */
+}
+
+header .header-right .open-right-menu-button {
+    /* margin: 0; */
+    border: 1px solid grey;
+    background-color: var(--dark-theme-button-bg-color);
+    /* background-color: pink; */
+    color: var(--light-theme-button-color);
+    
+}
+
+header .header-right .open-right-menu-button .icon {
+    /* color: hsl(0, 0, 12); */
+    /* color: var(--light-theme-button-color); */
+    font-size: 24px;
+    margin: 4px;
+
+}
+
+
+/* BOUTON SWITCH THEME */
+
+.switch-container {
+    /* display: flex; */
+    background-color: hsl(0, 0%, 94%);
+    border: 1px solid rgb(203, 203, 203);
+    width: 80px;
+    height: 40px;
+    border-radius: 40px;
+    cursor: pointer;
+}
+.switch-container.dark {
+    background-color: var(--dark-theme-bg-color);
+    border: 2px solid var(--dark-theme-button-bg-color);
+}
+.switch-container .ball {
+    width: 40px;
+    height:inherit;
+    text-align: center;
+    border-radius: 100%;
+}
+.switch-container .ball.dark {
+    
+    background-color: var(--dark-theme-button-bg-color);
+    
+    transform: translateX(40px);
+    animation-duration: 400ms;
+    animation-direction: backwards;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+    animation-fill-mode: backwards;
+    animation-name: toggleThemeAnim;
+}
+.switch-container .ball.light {
+    animation-duration: 400ms;
+    animation-direction: forwards;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+    animation-name: toggleThemeAnim;
+}
+@keyframes toggleThemeAnim {
+    from {
+        background-color: hsl(221, 47%, 12%);
+    }
+    to {
+        background-color: hsl(51, 78%, 74%);
+        transform: translateX(0);
+    }
+
+}
+
+.switch-container .ball svg {
+    margin-top: 11px;
+    background-color: transparent;
+    color:hsl(44, 92%, 38%);
+}
+.switch-container .ball span {
+    background-color: red;
+
+}
+
+/* SPACE LOGS */
+header .header-left .space-logs p {
+    padding-top: 2px;
+    font-family: "Rajdhani", monospace;
+    font-size: 17px;
+    color: var(--dark-theme-text-color);
+}

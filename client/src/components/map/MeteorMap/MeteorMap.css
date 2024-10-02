@@ -1,0 +1,20 @@
+.custom-marker-cluster {
+    background-color: #d2d2d263;
+    border-radius: 100%;
+    text-align: center;
+}
+.custom-marker-cluster span {
+    margin-top: 8px;
+    display: block;
+}
+
+.custom-marker-icon {
+    background-color: #47a8c690;
+    border-radius: 100%;
+    text-align: center;
+}
+.custom-marker-icon span {
+    margin-top: 8px;
+    display: block;
+    color:#f3f3f3d5;
+}

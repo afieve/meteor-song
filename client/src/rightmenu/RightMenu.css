@@ -1,0 +1,11 @@
+.RightMenu {
+    width: 350px;
+    padding: 16px 24px 0 24px;
+    padding: 8px;
+    border:1px solid grey;
+    /* max-height: 100vh; */
+    overflow: scroll;
+}
+.RightMenu.invisible {
+    display: none;
+}

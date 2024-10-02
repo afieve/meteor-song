@@ -1,0 +1,37 @@
+footer {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding:8px;
+    height:fit-content;
+    color: var(--dark-theme-text-color);
+}
+footer .footer-page-toggler {
+    display: flex;
+    align-items: center;
+    cursor:pointer;
+    height: fit-content;
+}
+footer .footer-page-toggler p {
+    padding-left: 4px;
+    font-size: 14px;
+    margin: 0;
+}
+footer .footer-page-toggler .toggler-icon {
+    font-size: 18px;
+}
+footer .footer-links {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    height: fit-content;
+    gap: 8px;
+}
+footer .footer-links a {
+    font-size: 14px;
+    color: hsl(200, 55%, 50%);
+}
+footer .footer-links a .icon {
+    font-size: 17px;
+}

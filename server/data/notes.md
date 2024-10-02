@@ -1,0 +1,4 @@
+# `/server/data`
+
+- `/classifications/classifications_tree.json`: Contient l'arborescence des classifications de météorites. Importé par le fichier `/server/services/ClassificationsService.ts`, il sert de base si l'on veut générer procéduralement l'intégralité des documents contenus dans la collection `classifications` de la base de données. La fonction `ClassificationsServices.generateAndInsertFullClassificationTreeInDBCollection` s'en sert comme base pour cette génération procédurale.
+- `/saves/collection/<collection_name>`: ces répertoires contiennent, pour chaque collection de la base de données, des fichiers json `<collection_name>-<timestamp>.json` de sauvegarde de la collection.

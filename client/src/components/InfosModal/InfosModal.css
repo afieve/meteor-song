@@ -1,0 +1,83 @@
+#infos-modal {
+    color: #E0E0E0;
+    background-color: #0D0D0D;
+    /* border: 1px dashed seagreen; */
+    font-family: 'Instrument Sans', sans-serif;
+    border-radius: 8px;
+    width: fit-content;
+}
+
+#infos-modal-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: fit-content;
+    /* background-color: brown; */
+    /* border: 1px dashed brown; */
+
+    /* gap: 8px; */
+    /* padding-right: 4px; */
+}
+#infos-modal-header-left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* background-color: rosybrown; */
+    /* border: 1px dashed rosybrown; */
+    height: fit-content;
+    
+    gap: 16px;
+    padding: 0;
+}
+#infos-modal-header-left h4 {
+    font-family: 20px;
+}
+
+#infos-modal-header-left button {
+    padding: 7px 10px 10px 10px;
+    margin-right: 4px;
+    width: 45px;
+    height: 45px;
+    background-color: #191919;
+    border:none;
+    color: #E0E0E0;
+    margin: 4px;
+    /* width: 25px; */
+    /* height: 25px; */
+}
+#infos-modal-header h4 {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0;
+}
+#infos-close-btn-container {
+    padding: 4px;
+    margin: 4px;
+}
+#infos-close-btn {
+    width:38px;
+    height:38px;
+    background-color: #191919;
+    border:none;
+    color:#E0E0E0;
+}
+
+/* BODY */
+#infos-modal-body {
+    font-size: 12px;
+    padding: 0 66px;
+    font-weight: 400;
+}
+#infos-modal-footer {
+    /* display: flex; */
+    /* flex-direction: row; */
+    /* align-content: flex-end; */
+    text-align: right;
+    /* align-content: end; */
+    /* border:1px dashed orange; */
+}
+#infos-modal-footer-page-cursor {
+    width: fit-content;
+    /* border:1px dashed orangered; */
+}

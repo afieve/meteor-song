@@ -1,0 +1,10 @@
+.filter-title {
+    color:grey;
+}
+.classif-filter-list-item input:hover {
+    cursor:pointer;
+}
+.classif-filter-list-item label {
+    color: grey;
+    cursor: pointer;
+}
