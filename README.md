@@ -3,7 +3,7 @@
 ![Aperçu d'une interface web cartographique représentant les météorites trouvées sur Terre.](./img/preview_0.1_SPA%203.jpg)
 
 >[!WARNING]
-> Ce projet est en cours de développement. Une première version sera disponible en ligne d'ici le 1er octobre.
+> Ce projet est en cours de développement. Une première version sera disponible en ligne à la mi-octobre.
 >
 > This project is currently under development. A first version will be available by October 1.
 
