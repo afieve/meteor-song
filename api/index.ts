@@ -49,10 +49,8 @@ db.once('open', async () => {
 // Reduce fingerprinting: the ability for an external program to determine the software that the server uses. It doesn't prevent sophisticated attacks, only casual exploits.
 app.disable('x-powered-by'); 
 
-app.get('/', (req, res) => {
-    res.setHeader('content-type', 'text/plain');
-    res.send('Hello');
-});
+app.get("/", (req, res) => res.send("Express on Vercel"));
+
 app.post('/ml', async (req, res) => {
     logger.info(`${req.headers.origin}: POST "/ml": Demande l'intégralité des données d'atterrissages de météorites.`);
     const docs = await getAllMeteoriteLandings({ geolocated: true, markersEssentials: false });
@@ -173,3 +171,5 @@ app.use((req, res, next) => {
 app.listen(PORT, () => {
     logger.info(`Le serveur est lancé sur le port ${PORT}.`)
 })
+
+module.exports = app;
