@@ -1,12 +1,12 @@
 import mongoose from "mongoose";
-import { clearMeteoriteLandingsCollection, getAllMeteoriteLandings, getSingleMeteoriteByDatastroId, insertAllMeteoriteLandingsGeoJSONDataToCollection, mergeSameMeteoriteLandingDocuments } from "./services/MeteoriteLandingsService";
+import { clearMeteoriteLandingsCollection, getAllMeteoriteLandings, getSingleMeteoriteByDatastroId, insertAllMeteoriteLandingsGeoJSONDataToCollection, mergeSameMeteoriteLandingDocuments } from "./src/services/MeteoriteLandingsService";
 import express from 'express';
 import helmet from 'helmet';
 import 'dotenv/config';
 import cors from 'cors';
-import { generateAndInsertFullClassificationTreeInDBCollection, getFullClassificationTreeFromCollection } from "./services/ClassificationsService";
+import { generateAndInsertFullClassificationTreeInDBCollection, getFullClassificationTreeFromCollection } from "./src/services/ClassificationsService";
 import pino from 'pino';
-import { getHTMLColorTable } from "./services/ColorService";
+import { getHTMLColorTable } from "./src/services/ColorService";
 
 
 const logger = pino();
