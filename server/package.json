@@ -6,9 +6,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
     "start": "npm run build && node dist/index.js | pino-pretty",
-    "dev": "nodemon --watch 'src/**/*.ts' --watch 'api/**/*.ts' --exec 'ts-node' api/index.ts",
-    "lint": "eslint 'src/**/*.{ts,js}' 'api/**/*.{ts,js}'",
-    "prepare": "npm run lint && npm run build"
+    "dev": "nodemon --watch 'src/**/*.ts' --watch 'api/**/*.ts' --exec 'ts-node' api/index.ts"
   },
   "author": "",
   "license": "ISC",
