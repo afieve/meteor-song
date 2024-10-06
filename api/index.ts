@@ -49,8 +49,9 @@ db.once('open', async () => {
 // Reduce fingerprinting: the ability for an external program to determine the software that the server uses. It doesn't prevent sophisticated attacks, only casual exploits.
 app.disable('x-powered-by'); 
 
-app.get('/', async (req, res) => {
-    res.send('hello');
+app.get('/', (req, res) => {
+    res.setHeader('content-type', 'text/plain');
+    res.send('Hello');
 });
 app.post('/ml', async (req, res) => {
     logger.info(`${req.headers.origin}: POST "/ml": Demande l'intégralité des données d'atterrissages de météorites.`);
