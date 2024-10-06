@@ -1,0 +1,26 @@
+{
+    "compilerOptions": {
+        "target": "es2017",                       // Cible de compilation
+        "module": "commonjs",                     // Module system
+        "rootDir": ".",                            // Répertoire racine des sources
+        "outDir": "dist",                          // Répertoire de sortie
+        "moduleResolution": "node",                // Résolution des modules
+        "esModuleInterop": true,                   // Interopérabilité des modules ES
+        "resolveJsonModule": true,                 // Permet d'importer des fichiers JSON
+        "allowSyntheticDefaultImports": true,      // Permet les importations par défaut synthétiques
+        "sourceMap": true,                         // Générer des fichiers source map
+        "types": [
+            "node"                                  // Types pour Node.js
+        ]
+    },
+    "include": [
+        "src/**/*",
+        "api/**/*"
+    ],
+    "exclude": [
+        "node_modules",
+        "dist",
+        "data/saves/collection",
+        "data/raw-data"
+    ]
+}

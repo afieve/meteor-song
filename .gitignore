@@ -6,9 +6,8 @@ node_modules/
 
 # production files
 /server/dist/
-/api/dist/
-# /api/src/routes/
 /client/dist/
+
 # test data
 /data/
 
@@ -19,6 +18,9 @@ server/data/saves/
 img/*
 # include: github preview image
 !img/preview_0.1_SPA 3.jpg
+
+# tree.txt files
+*/tree.txt
 
 # environnement variables
 *.env
