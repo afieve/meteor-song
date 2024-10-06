@@ -15,18 +15,18 @@ const logger = pino();
 const app = express();
 const PORT: number = parseInt(process.env.SERVER_PORT);
 
-
+/*
 app.use(cors({
     origin: process.env.CLIENT_APP_ORIGIN_URL
 }));
-
+*/
 
 // app.set('view engine', 'pug');
 app.use(helmet());
 app.use(express.json()); // Pour parser le JSON dans les requêtes
 
 // Middleware CORS custom
-
+/*
 app.use((req, res, next) => {
     const allowedOrigin = process.env.CLIENT_APP_ORIGIN_URL;
     const origin = req.headers.origin;
@@ -39,7 +39,7 @@ app.use((req, res, next) => {
     next();
 
 });
-
+*/
 
 // app.use( (req, res, next) => {
 //     res.header("Access-Control-Allow-Origin", process.env.CLIENT_APP_ORIGIN_URL);
