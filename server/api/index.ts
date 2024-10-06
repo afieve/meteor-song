@@ -15,11 +15,11 @@ const logger = pino();
 const app = express();
 const PORT: number = parseInt(process.env.SERVER_PORT);
 
-
+/*
 app.use(cors({
     origin: process.env.CLIENT_APP_ORIGIN_URL
 }));
-
+*/
 
 // app.set('view engine', 'pug');
 app.use(helmet());
