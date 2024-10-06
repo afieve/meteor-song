@@ -4,7 +4,7 @@ import helmet from 'helmet';
 import 'dotenv/config';
 import cors from 'cors';
 import pino from 'pino';
-import serverless from "serverless-http";
+// import serverless from "serverless-http";
 
 import mlRoutes from "../src/routes/meteoriteLandingsRoutes";
 import classifRoutes from "../src/routes/classificationsRoutes";
@@ -111,4 +111,5 @@ app.listen(PORT, () => {
     logger.info(`Le serveur est lancé sur le port ${PORT}.`)
 })
 
-export default serverless(app);
+// export default serverless(app);
+module.exports = app;
