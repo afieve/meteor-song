@@ -7,8 +7,8 @@ node_modules/
 # production files
 /server/dist/
 /api/dist/
+# /api/src/routes/
 /client/dist/
-
 # test data
 /data/
 

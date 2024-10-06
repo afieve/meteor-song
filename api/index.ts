@@ -7,11 +7,17 @@ import cors from 'cors';
 import { generateAndInsertFullClassificationTreeInDBCollection, getFullClassificationTreeFromCollection } from "./src/services/ClassificationsService";
 import pino from 'pino';
 import { getHTMLColorTable } from "./src/services/ColorService";
+import serverless from "serverless-http";
+
+import mlRoutes from "./src/routes/meteoriteLandingsRoutes";
+import classifRoutes from "./src/routes/classificationsRoutes";
+import colorRoutes from "./src/routes/colorRoutes";
 
 
 const logger = pino();
 const app = express();
 const PORT: number = parseInt(process.env.SERVER_PORT);
+
 
 app.use(cors({
     origin: process.env.CLIENT_APP_ORIGIN_URL
@@ -20,8 +26,10 @@ app.use(cors({
 
 // app.set('view engine', 'pug');
 app.use(helmet());
+app.use(express.json()); // Pour parser le JSON dans les requêtes
 
 // Middleware CORS custom
+
 app.use((req, res, next) => {
     const allowedOrigin = process.env.CLIENT_APP_ORIGIN_URL;
     const origin = req.headers.origin;
@@ -30,11 +38,18 @@ app.use((req, res, next) => {
         return res.status(403).send("Forbidden: Invalid origin.");
     } else if (!origin) {
         return res.status(403).send("Forbidden: No origin specified.")
-
     }
     next();
     
 });
+
+
+// app.use( (req, res, next) => {
+//     res.header("Access-Control-Allow-Origin", process.env.CLIENT_APP_ORIGIN_URL);
+//     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+//     next();
+// });
+
 
 
 mongoose.connect(process.env.MONGODB_CONNECTION_STRING.toString());
@@ -49,7 +64,14 @@ db.once('open', async () => {
 // Reduce fingerprinting: the ability for an external program to determine the software that the server uses. It doesn't prevent sophisticated attacks, only casual exploits.
 app.disable('x-powered-by'); 
 
-app.get("/", (req, res) => res.send("Express on Vercel"));
+app.get("/", (req, res, next) => res.send(`Express on Vercel. Origin: ${req.headers.origin ? req.headers.origin : ""}`));
+
+app.use('/ml', mlRoutes);
+app.use('/classif', classifRoutes);
+app.use('/colors', colorRoutes);
+
+
+/*
 
 app.post('/ml', async (req, res) => {
     logger.info(`${req.headers.origin}: POST "/ml": Demande l'intégralité des données d'atterrissages de météorites.`);
@@ -112,7 +134,7 @@ app.get('/ml/clear-collection', async (req, res) => {
     const response = await clearMeteoriteLandingsCollection();
     logger.info(`${req.headers.origin}: GET "/ml/clear-collection": ${response.message}`);
     res.send(response);
-})
+});
 
 app.get('/classif/tree', async (req, res) => {
     logger.info(`${req.headers.origin}: GET "/classif/tree": Demande l'arbre de classification.`);
@@ -142,9 +164,11 @@ app.post('/classif/generate-and-insert', async (req, res) => {
 app.get('/colors', async (req, res) => {
     logger.info(`${req.headers.origin}: GET "/colors": Demande la page HTML 'colors'.`);
     const html = await getHTMLColorTable();
-    res.send(html);
-    
+    res.send(html); 
 });
+*/
+
+
 /*
 *   # Prevent open redirects
 *   If the user gets redirected here by some malevolant program, this middleware redirects him to the URL he was originally trying to access.
@@ -172,4 +196,4 @@ app.listen(PORT, () => {
     logger.info(`Le serveur est lancé sur le port ${PORT}.`)
 })
 
-module.exports = app;
+export default serverless(app);
