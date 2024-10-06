@@ -1,0 +1,3201 @@
+{
+    "name": {
+        "eng": "Meteorite",
+        "fr": "Météorite"
+    },
+    "classCodes": [],
+    "children": [
+        {
+            "name": {
+                "eng": "Stony",
+                "fr": "Pierreuses"
+            },
+            "classCodes": [],
+            "regex": {
+                "selfAndChildren": "^OC+$|^OC[1-7].*|^H+$|^H[-|?|(|\/|~|1-7].*|^L(?![A-Za-z]).*$|^LL(?![A-Za-z]).*$|^C+$|^C+[H|B|I|K|O|R|V|M|1-7]+.*|^E+$|^E+\\-+.*|^E+[1-7]+.*|^E[H|L]+.*|^E-(an)$|K+$|^K[1-7].*|^R+$|^R[1-7].*|^Chondrite-fusion crust+$|^Chondrite-ung+$|^Howardite.*|^Eucrite.*|^Diogenite.*|^Aubrite.*|^Angrite.*|^Lunar.*|^Martian.*|^Achondrite-ung+$|^Enst achon-ung+$|^Enst achon+$|^Achondrite-prim|Acapulcoite|[L|l]odranite.*|^Brachinite.*|^Ureilite.*|^Winonaite.*"
+            },
+            "mindat_id": "49515",
+            "children": [
+                {
+                    "name": {
+                        "eng": "Chondrite",
+                        "fr": "Chondrite"
+                    },
+                    "description": {
+                        "eng": "A primitive meteorite, usually bearing chondrules, that has not experienced igneous differentiation on its parent body.",
+                        "fr": "Météorite primitive, portant généralement des chondrules, qui n'a pas subi de différenciation ignée sur son corps parent."
+                    },
+                    "classCodes": [],
+                    "regex": {
+                        "selfAndChildren": "^OC+$|^OC[1-7].*|^H+$|^H[-|?|(|\/|~|1-7].*|^L(?![A-Za-z]).*$|^LL(?![A-Za-z]).*$|^C+$|^C+[H|B|I|K|O|R|V|M|1-7]+.*|^E+$|^E+\\-+.*|^E+[1-7]+.*|^E[H|L]+.*|^E-(an)$|K+$|^K[1-7].*|^R+$|^R[1-7].*|^Chondrite-fusion crust+$|^Chondrite-ung+$"
+                    },
+                    "mindat_id": "49515",
+                    "children": [
+                        {
+                            "name": {
+                                "eng": "Ordinary chondrite",
+                                "fr": "Chondrite ordinaire"
+                            },
+                            "description": {
+                                "eng": "Fragments of small asteroids, ejected from the main belt by a shock-collision between two asteroids, they are the most common: around 87% of meteorites.",
+                                "fr": "Fragments de petits astéroïdes, éjectés de la ceinture principale par un choc-collision entre deux astéroïdes, elles sont les plus fréquentes : environ 87% des météorites."
+                            },
+                            "classCodes": [
+                                "OC"
+                            ],
+                            "regex": {
+                                "selfAndChildren": "^OC+$|^OC[1-7].*|^H+$|^H[-|?|(|\/|~|1-7].*|^L(?![A-Za-z]).*$|^LL(?![A-Za-z]).*$"
+                            },
+                            "mindat_id": "49581",
+                            "children": [
+                                {
+                                    "name": {
+                                        "eng": "H chondrite",
+                                        "fr": "Chondrite H"
+                                    },
+                                    "description": {
+                                        "eng": "The name (H for high) comes from their abundance of iron, compared to other ordinary chondrites. This element represents between 25 and 31% of the weight. More than half is present in metallic form, explaining the strong magnetism of these meteorites despite their stone appearance.",
+                                        "fr": "Le nom (H pour high, « haut » en anglais) vient de leur abondance en fer, par rapport aux autres chondrites ordinaires. Cet élément représente entre 25 et 31 % du poids. Plus de la moitié est présent sous forme métallique, expliquant le fort magnétisme de ces météorites malgré leur apparence de pierre."
+                                    },
+                                    "classCodes": [
+                                        "H"
+                                    ],
+                                    "regex": {
+                                        "selfAndChildren": "^H+$|^H[-|?|(|\/|~|1-7].*"
+                                    },
+                                    "mindat_id": "49584",
+                                    "children": [
+                                        {
+                                            "name": {
+                                                "eng": "H3 chondrite",
+                                                "fr": "Chondrite H3"
+                                            },
+                                            "description": {
+                                                "eng": "Type H chondrite, from petrological type 3.",
+                                                "fr": "Chondrite de type H, du type pétrologique 3."
+                                            },
+                                            "classCodes": [
+                                                "H3"
+                                            ],
+                                            "regex": {
+                                                "selfAndChildren": "^H3.*"
+                                            },
+                                            "mindat_id": "49585"
+                                        },
+                                        {
+                                            "name": {
+                                                "eng": "H4 chondrite",
+                                                "fr": "Chondrite H4"
+                                            },
+                                            "description": {
+                                                "eng": "Type H chondrite, from petrological type 4.",
+                                                "fr": "Chondrite de type H, du type pétrologique 4."
+                                            },
+                                            "classCodes": [
+                                                "H4"
+                                            ],
+                                            "regex": {
+                                                "selfAndChildren": "^H4.*"
+                                            },
+                                            "mindat_id": "49606"
+                                        },
+                                        {
+                                            "name": {
+                                                "eng": "H5 chondrite",
+                                                "fr": "Chondrite H5"
+                                            },
+                                            "description": {
+                                                "eng": "Type H chondrite, from petrological type 5.",
+                                                "fr": "Chondrite de type H, du type pétrologique 5."
+                                            },
+                                            "classCodes": [
+                                                "H5"
+                                            ],
+                                            "regex": {
+                                                "selfAndChildren": "^H5.*"
+                                            },
+                                            "mindat_id": "49614"
+                                        },
+                                        {
+                                            "name": {
+                                                "eng": "H6 chondrite",
+                                                "fr": "Chondrite H6"
+                                            },
+                                            "description": {
+                                                "eng": "Type H chondrite, from petrological type 6.",
+                                                "fr": "Chondrite de type H, du type pétrologique 6."
+                                            },
+                                            "classCodes": [
+                                                "H6"
+                                            ],
+                                            "regex": {
+                                                "selfAndChildren": "^H6.*"
+                                            },
+                                            "mindat_id": "49619"
+                                        },
+                                        {
+                                            "name": {
+                                                "eng": "H7 chondrite",
+                                                "fr": "Chondrite H7"
+                                            },
+                                            "description": {
+                                                "eng": "Type H chondrite, from petrological type 7.",
+                                                "fr": "Chondrite de type H, du type pétrologique 7."
+                                            },
+                                            "classCodes": [
+                                                "H7"
+                                            ],
+                                            "regex": {
+                                                "selfAndChildren": "^H7.*"
+                                            },
+                                            "mindat_id": "49619"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": {
+                                        "eng": "L chondrite",
+                                        "fr": "Chondrite L"
+                                    },
+                                    "description": {
+                                        "eng": "",
+                                        "fr": "Leur nom (L = \"low\", bas en anglais) vient de leur teneur en fer relativement faible, par rapport aux chondrites de type H, qui contiennent environ 20 à 25 % de fer en masse. Historiquement, les chondrites de type L ont été nommées chondrites à hypersthène ou chondrites à olivine et hypersthène en rapport aux minéraux dominants, mais ces désignations sont maintenant obsolètes."
+                                    },
+                                    "classCodes": [
+                                        "L"
+                                    ],
+                                    "regex": {
+                                        "selfAndChildren": "^L(?![A-Za-z]).*$"
+                                    },
+                                    "mindat_id": "49648",
+                                    "children": [
+                                        {
+                                            "name": {
+                                                "eng": "L3 chondrite",
+                                                "fr": "Chondrite L3"
+                                            },
+                                            "classCodes": [
+                                                "L3"
+                                            ],
+                                            "regex": {
+                                                "selfAndChildren": "^L3.*"
+                                            },
+                                            "mindat_id": "49649"
+                                        },
+                                        {
+                                            "name": {
+                                                "eng": "L4 chondrite",
+                                                "fr": "Chondrite L4"
+                                            },
+                                            "classCodes": [
+                                                "L4"
+                                            ],
+                                            "regex": {
+                                                "selfAndChildren": "^L4.*"
+                                            },
+                                            "mindat_id": "49695"
+                                        },
+                                        {
+                                            "name": {
+                                                "eng": "L5 chondrite",
+                                                "fr": "Chondrite L5"
+                                            },
+                                            "classCodes": [
+                                                "L5"
+                                            ],
+                                            "regex": {
+                                                "selfAndChildren": "^L5.*"
+                                            },
+                                            "mindat_id": "49702"
+                                        },
+                                        {
+                                            "name": {
+                                                "eng": "L6 chondrite",
+                                                "fr": "Chondrite L6"
+                                            },
+                                            "classCodes": [
+                                                "L6"
+                                            ],
+                                            "regex": {
+                                                "selfAndChildren": "^L6.*"
+                                            },
+                                            "mindat_id": "49710"
+                                        },
+                                        {
+                                            "name": {
+                                                "eng": "L7 chondrite",
+                                                "fr": "Chondrite L6"
+                                            },
+                                            "classCodes": [
+                                                "L7"
+                                            ],
+                                            "regex": {
+                                                "selfAndChildren": "^L7.*"
+                                            },
+                                            "mindat_id": ""
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": {
+                                        "eng": "LL chondrite",
+                                        "fr": "Chondrite LL"
+                                    },
+                                    "description": {
+                                        "eng": "",
+                                        "fr": "LL est l'abréviation de l'anglais low (total) iron, low metal, soit une faible teneur en fer total et en fer métallique. Elles contiennent 19 à 22 % de fer total et seulement 0,3 à 3 % de fer métallique."
+                                    },
+                                    "classCodes": [
+                                        "LL"
+                                    ],
+                                    "regex": {
+                                        "selfAndChildren": "^LL(?![A-Za-z]).*$"
+                                    },
+                                    "mindat_id": "49745",
+                                    "children": [
+                                        {
+                                            "name": {
+                                                "eng": "LL3 chondrite",
+                                                "fr": "Chondrite LL3"
+                                            },
+                                            "classCodes": [
+                                                "LL3"
+                                            ],
+                                            "regex": {
+                                                "selfAndChildren": "^LL3.*"
+                                            },
+                                            "mindat_id": "49746"
+                                        },
+                                        {
+                                            "name": {
+                                                "eng": "LL4 chondrite",
+                                                "fr": "Chondrite LL4"
+                                            },
+                                            "classCodes": [
+                                                "LL4"
+                                            ],
+                                            "regex": {
+                                                "selfAndChildren": "^LL4.*"
+                                            },
+                                            "mindat_id": "49768"
+                                        },
+                                        {
+                                            "name": {
+                                                "eng": "LL5 chondrite",
+                                                "fr": "Chondrite LL5"
+                                            },
+                                            "classCodes": [
+                                                "LL5"
+                                            ],
+                                            "regex": {
+                                                "selfAndChildren": "^LL5.*"
+                                            },
+                                            "mindat_id": "49772"
+                                        },
+                                        {
+                                            "name": {
+                                                "eng": "LL6 chondrite",
+                                                "fr": "Chondrite LL6"
+                                            },
+                                            "classCodes": [
+                                                "LL6"
+                                            ],
+                                            "regex": {
+                                                "selfAndChildren": "^LL6.*"
+                                            },
+                                            "mindat_id": "49776"
+                                        },
+                                        {
+                                            "name": {
+                                                "eng": "LL7 chondrite",
+                                                "fr": "Chondrite LL7"
+                                            },
+                                            "classCodes": [
+                                                "LL7"
+                                            ],
+                                            "regex": {
+                                                "selfAndChildren": "^LL7.*"
+                                            },
+                                            "mindat_id": ""
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": {
+                                "eng": "Carbonaceous chondrite",
+                                "fr": "Chondrite carbonnée"
+                            },
+                            "description": {
+                                "eng": "A major class of chondrites that mostly have Mg/Si ratios near the solar value and oxygen isotope compositions that plot below the terrestrial fractionation line.",
+                                "fr": ""
+                            },
+                            "regex": {
+                                "selfAndChildren": "^C+$|^C+[H|B|I|K|O|R|V|M|1-7]+.*"
+                            },
+                            "classCodes": [],
+                            "mindat_id": "49519",
+                            "children": [
+                                {
+                                    "name": {
+                                        "eng": "C chondrite",
+                                        "fr": "Chondrite C"
+                                    },
+                                    "classCodes": [
+                                        "C"
+                                    ],
+                                    "regex": {
+                                        "self": "^C+$",
+                                        "selfAndChildren": "^C+$|^C+[1-7]+.*"
+                                    },
+                                    "mindat_id": "49520",
+                                    "children": [
+                                        {
+                                            "name": {
+                                                "eng": "C1 chondrite",
+                                                "fr": "Chondrite C1"
+                                            },
+                                            "classCodes": [
+                                                "C1"
+                                            ],
+                                            "regex": {
+                                                "selfAndChildren": "^C1.*"
+                                            },
+                                            "mindat_id": "49521"
+                                        },
+                                        {
+                                            "name": {
+                                                "eng": "C2 chondrite",
+                                                "fr": "Chondrite C2"
+                                            },
+                                            "classCodes": [
+                                                "C2"
+                                            ],
+                                            "regex": {
+                                                "selfAndChildren": "^C2.*"
+                                            },
+                                            "mindat_id": "49524"
+                                        },
+                                        {
+                                            "name": {
+                                                "eng": "C3 chondrite",
+                                                "fr": "Chondrite C3"
+                                            },
+                                            "classCodes": [
+                                                "C3"
+                                            ],
+                                            "regex": {
+                                                "selfAndChildren": "^C3.*"
+                                            },
+                                            "mindat_id": "49526"
+                                        },
+                                        {
+                                            "name": {
+                                                "eng": "C4 chondrite",
+                                                "fr": "Chondrite C4"
+                                            },
+                                            "classCodes": [
+                                                "C4"
+                                            ],
+                                            "regex": {
+                                                "selfAndChildren": "^C4.*"
+                                            },
+                                            "mindat_id": "49530"
+                                        },
+                                        {
+                                            "name": {
+                                                "eng": "C5 chondrite",
+                                                "fr": "Chondrite C5"
+                                            },
+                                            "classCodes": [
+                                                "C5"
+                                            ],
+                                            "regex": {
+                                                "selfAndChildren": "^C5.*"
+                                            },
+                                            "mindat_id": "49533"
+                                        },
+                                        {
+                                            "name": {
+                                                "eng": "C6 chondrite",
+                                                "fr": "Chondrite C6"
+                                            },
+                                            "classCodes": [
+                                                "C6"
+                                            ],
+                                            "regex": {
+                                                "selfAndChildren": "^C6.*"
+                                            },
+                                            "mindat_id": "49535"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": {
+                                        "eng": "CB chondrite",
+                                        "fr": "Chondrite CB"
+                                    },
+                                    "classCodes": [
+                                        "CB"
+                                    ],
+                                    "regex": {
+                                        "selfAndChildren": "^CB.*"
+                                    },
+                                    "mindat_id": "49536",
+                                    "children": [
+                                        {
+                                            "name": {
+                                                "eng": "CBa chondrite",
+                                                "fr": "Chondrite CBa"
+                                            },
+                                            "classCodes": [
+                                                "CBa"
+                                            ],
+                                            "regex": {
+                                                "selfAndChildren": "^CBa.*"
+                                            },
+                                            "mindat_id": "49537"
+                                        },
+                                        {
+                                            "name": {
+                                                "eng": "CBb chondrite",
+                                                "fr": "Chondrite CBb"
+                                            },
+                                            "classCodes": [
+                                                "CBb"
+                                            ],
+                                            "regex": {
+                                                "selfAndChildren": "^CBb.*"
+                                            },
+                                            "mindat_id": "49538"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": {
+                                        "eng": "CH chondrite",
+                                        "fr": "Chondrite CH"
+                                    },
+                                    "classCodes": [
+                                        "CH/CBb"
+                                    ],
+                                    "regex": {
+                                        "selfAndChildren": "^CH.*"
+                                    },
+                                    "mindat_id": "49539",
+                                    "children": [
+                                        {
+                                            "name": {
+                                                "eng": "CH3 chondrite",
+                                                "fr": "Chondrite CH3"
+                                            },
+                                            "classCodes": [
+                                                "CH3"
+                                            ],
+                                            "regex": {
+                                                "selfAndChildren": "^CH3.*"
+                                            },
+                                            "mindat_id": "49540"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": {
+                                        "eng": "CI chondrite",
+                                        "fr": "Chondrite CI"
+                                    },
+                                    "classCodes": [
+                                        "CI"
+                                    ],
+                                    "regex": {
+                                        "selfAndChildren": "^CI.*"
+                                    },
+                                    "mindat_id": "49541",
+                                    "children": [
+                                        {
+                                            "name": {
+                                                "eng": "CI1 chondrite",
+                                                "fr": "Chondrite CI1"
+                                            },
+                                            "classCodes": [
+                                                "CI1"
+                                            ],
+                                            "regex": {
+                                                "selfAndChildren": "^CI1.*"
+                                            },
+                                            "mindat_id": "49542"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": {
+                                        "eng": "CK chondrite",
+                                        "fr": "Chondrite CK"
+                                    },
+                                    "classCodes": [
+                                        "CK"
+                                    ],
+                                    "regex": {
+                                        "selfAndChildren": "^CK.*"
+                                    },
+                                    "mindat_id": "49543",
+                                    "children": [
+                                        {
+                                            "name": {
+                                                "eng": "CK3 chondrite",
+                                                "fr": "Chondrite CK3"
+                                            },
+                                            "classCodes": [
+                                                "CK3",
+                                                "CK3-an",
+                                                "CK3.8",
+                                                "CK3/4"
+                                            ],
+                                            "regex": {
+                                                "selfAndChildren": "^CK3.*"
+                                            },
+                                            "mindat_id": "49544"
+                                        },
+                                        {
+                                            "name": {
+                                                "eng": "CK4 chondrite",
+                                                "fr": "Chondrite CK4"
+                                            },
+                                            "classCodes": [
+                                                "CK4",
+                                                "CK4-an",
+                                                "CK4/5"
+                                            ],
+                                            "regex": {
+                                                "selfAndChildren": "^CK4.*"
+                                            },
+                                            "mindat_id": "49548"
+                                        },
+                                        {
+                                            "name": {
+                                                "eng": "CK5 chondrite",
+                                                "fr": "Chondrite CK5"
+                                            },
+                                            "classCodes": [
+                                                "CK5",
+                                                "CK5/6"
+                                            ],
+                                            "regex": {
+                                                "selfAndChildren": "^CK5.*"
+                                            },
+                                            "mindat_id": "49550"
+                                        },
+                                        {
+                                            "name": {
+                                                "eng": "CK6 chondrite",
+                                                "fr": "Chondrite CK6"
+                                            },
+                                            "classCodes": [
+                                                "CK6"
+                                            ],
+                                            "regex": {
+                                                "selfAndChildren": "^CK6.*"
+                                            },
+                                            "mindat_id": "49551"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": {
+                                        "eng": "CL chondrite",
+                                        "fr": "Chondrite CL"
+                                    },
+                                    "classCodes": [
+                                        "CL"
+                                    ],
+                                    "regex": {
+                                        "selfAndChildren": "^CL.*"
+                                    },
+                                    "mindat_id": "470876"
+                                },
+                                {
+                                    "name": {
+                                        "eng": "CM chondrite",
+                                        "fr": "Chondrite CM"
+                                    },
+                                    "classCodes": [
+                                        "CM",
+                                        "CM-an"
+                                    ],
+                                    "regex": {
+                                        "selfAndChildren": "^CM.*"
+                                    },
+                                    "mindat_id": "49552",
+                                    "children": [
+                                        {
+                                            "name": {
+                                                "eng": "CM1 chondrite",
+                                                "fr": "Chondrite CM1"
+                                            },
+                                            "classCodes": [
+                                                "CM1",
+                                                "CM1/2"
+                                            ],
+                                            "regex": {
+                                                "selfAndChildren": "^CM1.*"
+                                            },
+                                            "mindat_id": "49553",
+                                            "abbrv": "CM1"
+                                        },
+                                        {
+                                            "name": {
+                                                "eng": "CM2 chondrite",
+                                                "fr": "Chondrite CM2"
+                                            },
+                                            "classCodes": [
+                                                "CM2",
+                                                "CM2-an"
+                                            ],
+                                            "regex": {
+                                                "selfAndChildren": "^CM2.*"
+                                            },
+                                            "mindat_id": "49557",
+                                            "abbrv": "CM2"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": {
+                                        "eng": "CO chondrite",
+                                        "fr": "Chondrite CO"
+                                    },
+                                    "regex": {
+                                        "selfAndChildren": "^CO.*"
+                                    },
+                                    "classCodes": [
+                                        "CO"
+                                    ],
+                                    "mindat_id": "49559",
+                                    "children": [
+                                        {
+                                            "name": {
+                                                "eng": "CO3 chondrite",
+                                                "fr": "Chondrite CO3"
+                                            },
+                                            "classCodes": [
+                                                "CO3",
+                                                "CO3.0",
+                                                "CO3.1",
+                                                "CO3.2",
+                                                "CO3.3",
+                                                "CO3.4",
+                                                "CO3.5",
+                                                "CO3.6",
+                                                "CO3.7",
+                                                "CO3.8"
+                                            ],
+                                            "regex": {
+                                                "selfAndChildren": "^CO3.*"
+                                            },
+                                            "mindat_id": "49560",
+                                            "abbrv": "CO3"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": {
+                                        "eng": "CR chondrite",
+                                        "fr": "Chondrite CR"
+                                    },
+                                    "classCodes": [
+                                        "CR",
+                                        "CR-an"
+                                    ],
+                                    "regex": {
+                                        "selfAndChildren": "^CR.*"
+                                    },
+                                    "mindat_id": "49571",
+                                    "children": [
+                                        {
+                                            "name": {
+                                                "eng": "CR1 chondrite",
+                                                "fr": "Chondrite CR1"
+                                            },
+                                            "classCodes": [
+                                                "CR1"
+                                            ],
+                                            "regex": {
+                                                "selfAndChildren": "^CR1.*"
+                                            },
+                                            "mindat_id": "49572"
+                                        },
+                                        {
+                                            "name": {
+                                                "eng": "CR2 chondrite",
+                                                "fr": "Chondrite CR2"
+                                            },
+                                            "classCodes": [
+                                                "CR2",
+                                                "CR2-an"
+                                            ],
+                                            "regex": {
+                                                "selfAndChildren": "^CR2.*"
+                                            },
+                                            "mindat_id": "49573"
+                                        },
+                                        {
+                                            "name": {
+                                                "eng": "CR6 chondrite",
+                                                "fr": "Chondrite CR6"
+                                            },
+                                            "classCodes": [
+                                                "CR6"
+                                            ],
+                                            "regex": {
+                                                "selfAndChildren": "^CR6.*"
+                                            },
+                                            "mindat_id": "49575"
+                                        },
+                                        {
+                                            "name": {
+                                                "eng": "CR7 chondrite",
+                                                "fr": "Chondrite CR7"
+                                            },
+                                            "classCodes": [
+                                                "CR7"
+                                            ],
+                                            "regex": {
+                                                "selfAndChildren": "^CR7.*"
+                                            },
+                                            "mindat_id": "49575"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": {
+                                        "eng": "CV chondrite",
+                                        "fr": "Chondrite CV"
+                                    },
+                                    "classCodes": [
+                                        "CV"
+                                    ],
+                                    "regex": {
+                                        "selfAndChildren": "^CV.*"
+                                    },
+                                    "mindat_id": "49577",
+                                    "children": [
+                                        {
+                                            "name": {
+                                                "eng": "CV2 chondrite",
+                                                "fr": "Chondrite CV2"
+                                            },
+                                            "classCodes": [
+                                                "CV2"
+                                            ],
+                                            "regex": {
+                                                "selfAndChildren": "^CV2.*"
+                                            },
+                                            "mindat_id": "49578"
+                                        },
+                                        {
+                                            "name": {
+                                                "eng": "CV3 chondrite",
+                                                "fr": "Chondrite CV3"
+                                            },
+                                            "classCodes": [
+                                                "CV3",
+                                                "CV3-an"
+                                            ],
+                                            "regex": {
+                                                "selfAndChildren": "^CV3.*"
+                                            },
+                                            "mindat_id": "49579"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": {
+                                "eng": "Chondrite by petrological type",
+                                "fr": "Chondrite par type pétrologique"
+                            },
+                            "classCodes": [],
+                            "exclude": true,
+                            "mindat_id": "49839",
+                            "children": [
+                                {
+                                    "name": {
+                                        "eng": "Petrologic type 1 chondrite",
+                                        "fr": "Chondrite de type pétrologique 1"
+                                    },
+                                    "classCodes": [],
+                                    "exclude": true,
+                                    "mindat_id": "49840"
+                                },
+                                {
+                                    "name": {
+                                        "eng": "Petrologic type 2 chondrite",
+                                        "fr": "Chondrite de type pétrologique 2"
+                                    },
+                                    "classCodes": [],
+                                    "exclude": true,
+                                    "mindat_id": "49841"
+                                },
+                                {
+                                    "name": {
+                                        "eng": "Petrologic type 3 chondrite",
+                                        "fr": "Chondrite de type pétrologique 3"
+                                    },
+                                    "classCodes": [],
+                                    "exclude": true,
+                                    "mindat_id": "49842"
+                                },
+                                {
+                                    "name": {
+                                        "eng": "Petrologic type 4 chondrite",
+                                        "fr": "Chondrite de type pétrologique 4"
+                                    },
+                                    "classCodes": [],
+                                    "exclude": true,
+                                    "mindat_id": "49843"
+                                },
+                                {
+                                    "name": {
+                                        "eng": "Petrologic type 5 chondrite",
+                                        "fr": "Chondrite de type pétrologique 5"
+                                    },
+                                    "classCodes": [],
+                                    "exclude": true,
+                                    "mindat_id": "49844"
+                                },
+                                {
+                                    "name": {
+                                        "eng": "Petrologic type 6 chondrite",
+                                        "fr": "Chondrite de type pétrologique 6"
+                                    },
+                                    "classCodes": [],
+                                    "exclude": true,
+                                    "mindat_id": "49845"
+                                }
+                            ]
+                        },
+                        {
+                            "name": {
+                                "eng": "Enstatite chondrite",
+                                "fr": "Chondrite à entastite"
+                            },
+                            "description": {
+                                "eng": "A major class of chondrites that mostly have sub-solar Mg/Si and refractory/Si ratios, oxygen isotope compositions that plot near the terrestrial fractionation line, and highly reduced mineral assemblages (containing little FeO, Si-bearing metal, and sulfides of elements normally considered lithophile.",
+                                "fr": ""
+                            },
+                            "classCodes": [
+                                "E",
+                                "E-an"
+                            ],
+                            "regex": {
+                                "selfAndChildren": "^E+$|^E+\\-+.*|^E+[1-7]+.*|^E[H|L]+.*"
+                            },
+                            "mindat_id": "49800",
+                            "children": [
+                                {
+                                    "name": {
+                                        "eng": "E3 chondrite",
+                                        "fr": "Chondrite E3"
+                                    },
+                                    "classCodes": [
+                                        "E3",
+                                        "E3-an"
+                                    ],
+                                    "regex": {
+                                        "selfAndChildren": "^E3.*"
+                                    },
+                                    "mindat_id": "49804"
+                                },
+                                {
+                                    "name": {
+                                        "eng": "E4 chondrite",
+                                        "fr": "Chondrite E4"
+                                    },
+                                    "classCodes": [
+                                        "E4",
+                                        "E4-an"
+                                    ],
+                                    "regex": {
+                                        "selfAndChildren": "^E4.*"
+                                    },
+                                    "mindat_id": "49806"
+                                },
+                                {
+                                    "name": {
+                                        "eng": "E5 chondrite",
+                                        "fr": "Chondrite E5"
+                                    },
+                                    "classCodes": [
+                                        "E5",
+                                        "E5-an"
+                                    ],
+                                    "regex": {
+                                        "selfAndChildren": "^E5.*"
+                                    },
+                                    "mindat_id": "49807"
+                                },
+                                {
+                                    "name": {
+                                        "eng": "E6 chondrite",
+                                        "fr": "Chondrite E6"
+                                    },
+                                    "classCodes": [
+                                        "E6",
+                                        "E6-an"
+                                    ],
+                                    "regex": {
+                                        "selfAndChildren": "^E6.*"
+                                    },
+                                    "mindat_id": "49809"
+                                },
+                                {
+                                    "name": {
+                                        "eng": "EH chondrite",
+                                        "fr": "Chondrite EH"
+                                    },
+                                    "classCodes": [
+                                        "EH",
+                                        "EH-imp melt"
+                                    ],
+                                    "regex": {
+                                        "selfAndChildren": "^EH.*"
+                                    },
+                                    "mindat_id": "49810",
+                                    "children": [
+                                        {
+                                            "name": {
+                                                "eng": "EH3 chondrite",
+                                                "fr": "Chondrite EH3"
+                                            },
+                                            "classCodes": [
+                                                "EH3",
+                                                "EH3/4-an"
+                                            ],
+                                            "regex": {
+                                                "selfAndChildren": "^EH3.*"
+                                            },
+                                            "mindat_id": "49811",
+                                            "abbrv": "EH3"
+                                        },
+                                        {
+                                            "name": {
+                                                "eng": "EH4 chondrite",
+                                                "fr": "Chondrite EH4"
+                                            },
+                                            "classCodes": [
+                                                "EH4",
+                                                "EH4/5"
+                                            ],
+                                            "regex": {
+                                                "selfAndChildren": "^EH4.*"
+                                            },
+                                            "mindat_id": "49813",
+                                            "abbrv": "EH4"
+                                        },
+                                        {
+                                            "name": {
+                                                "eng": "EH5 chondrite",
+                                                "fr": "Chondrite EH5"
+                                            },
+                                            "classCodes": [
+                                                "EH5"
+                                            ],
+                                            "regex": {
+                                                "selfAndChildren": "^EH5.*"
+                                            },
+                                            "mindat_id": "49814",
+                                            "abbrv": "EH5"
+                                        },
+                                        {
+                                            "name": {
+                                                "eng": "EH6 chondrite",
+                                                "fr": "Chondrite EH6"
+                                            },
+                                            "classCodes": [
+                                                "EH6",
+                                                "EH6-an"
+                                            ],
+                                            "regex": {
+                                                "selfAndChildren": "^EH6.*"
+                                            },
+                                            "mindat_id": "49815",
+                                            "abbrv": "EH6"
+                                        },
+                                        {
+                                            "name": {
+                                                "eng": "EH7 chondrite",
+                                                "fr": "Chondrite EH7"
+                                            },
+                                            "classCodes": [
+                                                "EH7",
+                                                "EH7-an"
+                                            ],
+                                            "regex": {
+                                                "selfAndChildren": "^EH7.*"
+                                            },
+                                            "mindat_id": "49815"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": {
+                                        "eng": "EL chondrite",
+                                        "fr": "Chondrite EL"
+                                    },
+                                    "classCodes": [
+                                        "EL",
+                                        "EL-melt rock"
+                                    ],
+                                    "regex": {
+                                        "selfAndChildren": "^EL.*"
+                                    },
+                                    "mindat_id": "49820",
+                                    "children": [
+                                        {
+                                            "name": {
+                                                "eng": "EL3 chondrite",
+                                                "fr": "Chondrite EL3"
+                                            },
+                                            "classCodes": [
+                                                "EL3",
+                                                "EL3/4"
+                                            ],
+                                            "regex": {
+                                                "selfAndChildren": "^EL3.*"
+                                            },
+                                            "mindat_id": "49822"
+                                        },
+                                        {
+                                            "name": {
+                                                "eng": "EL4 chondrite",
+                                                "fr": "Chondrite EL4"
+                                            },
+                                            "classCodes": [
+                                                "EL4",
+                                                "EL4/5"
+                                            ],
+                                            "regex": {
+                                                "selfAndChildren": "^EL4.*"
+                                            },
+                                            "mindat_id": "49823"
+                                        },
+                                        {
+                                            "name": {
+                                                "eng": "EL5 chondrite",
+                                                "fr": "Chondrite EL5"
+                                            },
+                                            "classCodes": [
+                                                "EL5"
+                                            ],
+                                            "regex": {
+                                                "selfAndChildren": "^EL5.*"
+                                            },
+                                            "mindat_id": "49824"
+                                        },
+                                        {
+                                            "name": {
+                                                "eng": "EL6 chondrite",
+                                                "fr": "Chondrite EL6"
+                                            },
+                                            "classCodes": [
+                                                "EL6",
+                                                "EL6/7"
+                                            ],
+                                            "regex": {
+                                                "selfAndChildren": "^EL6.*"
+                                            },
+                                            "mindat_id": "49826"
+                                        },
+                                        {
+                                            "name": {
+                                                "eng": "EL7 chondrite",
+                                                "fr": "Chondrite EL7"
+                                            },
+                                            "classCodes": [
+                                                "EL7"
+                                            ],
+                                            "regex": {
+                                                "selfAndChildren": "^EL7.*"
+                                            },
+                                            "mindat_id": "49826"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": {
+                                "eng": "K chondrite",
+                                "fr": "Chondrite K"
+                            },
+                            "description": {
+                                "eng": "A grouplet of chondrites with similarities to Kakangari, which do not fit into the major classes of chondrites such as carbonaceous, ordinary, or enstatite.",
+                                "fr": ""
+                            },
+                            "classCodes": [
+                                "K"
+                            ],
+                            "regex": {
+                                "selfAndChildren": "^K+$|^K[1-7].*"
+                            },
+                            "mindat_id": "49829",
+                            "children": [
+                                {
+                                    "name": {
+                                        "eng": "K3 chondrite",
+                                        "fr": "Chondrite K3"
+                                    },
+                                    "classCodes": [
+                                        "K3"
+                                    ],
+                                    "regex": {
+                                        "selfAndChildren": "^K3.*"
+                                    },
+                                    "mindat_id": "49831"
+                                },
+                                {
+                                    "name": {
+                                        "eng": "K4 chondrite",
+                                        "fr": "Chondrite K4"
+                                    },
+                                    "classCodes": [
+                                        "K4"
+                                    ],
+                                    "regex": {
+                                        "selfAndChildren": "^K4.*"
+                                    },
+                                    "mindat_id": "49832"
+                                }
+                            ]
+                        },
+                        {
+                            "name": {
+                                "eng": "R chondrite",
+                                "fr": "Chondrite R"
+                            },
+                            "description": {
+                                "eng": "The Rumuruti (R) group of chondrites does not clearly belong to any of the major classes of chondrites (ordinary, carbonaceous, enstatite); R chondrites have sub-solar Mg/Si and refractory/Si ratios, oxygen isotope compositions that plot above the terrestrial fractionation line and ordinary chondrites, and highly oxidized mineralogy.",
+                                "fr": ""
+                            },
+                            "classCodes": [
+                                "R"
+                            ],
+                            "regex": {
+                                "selfAndChildren": "^R+$|^R[1-7].*"
+                            },
+                            "mindat_id": "49833",
+                            "children": [
+                                {
+                                    "name": {
+                                        "eng": "R3 chondrite",
+                                        "fr": "Chondrite R3"
+                                    },
+                                    "classCodes": [
+                                        "R3"
+                                    ],
+                                    "regex": {
+                                        "selfAndChildren": "^R3.*"
+                                    },
+                                    "mindat_id": "49835"
+                                },
+                                {
+                                    "name": {
+                                        "eng": "R4 chondrite",
+                                        "fr": "Chondrite R4"
+                                    },
+                                    "classCodes": [
+                                        "R4"
+                                    ],
+                                    "regex": {
+                                        "selfAndChildren": "^R4.*"
+                                    },
+                                    "mindat_id": "49836"
+                                },
+                                {
+                                    "name": {
+                                        "eng": "R5 chondrite",
+                                        "fr": "Chondrite R5"
+                                    },
+                                    "classCodes": [
+                                        "R5"
+                                    ],
+                                    "regex": {
+                                        "selfAndChildren": "^R5.*"
+                                    },
+                                    "mindat_id": "49837"
+                                },
+                                {
+                                    "name": {
+                                        "eng": "R6 chondrite",
+                                        "fr": "Chondrite R6"
+                                    },
+                                    "classCodes": [
+                                        "R6"
+                                    ],
+                                    "regex": {
+                                        "selfAndChildren": "^R6.*"
+                                    },
+                                    "mindat_id": "49838"
+                                }
+                            ]
+                        },
+                        {
+                            "name": {
+                                "eng": "Ngawite",
+                                "fr": "Ngawite"
+                            },
+                            "classCodes": [],
+                            "exclude": true,
+                            "mindat_id": "471147"
+                        },
+                        {
+                            "name": {
+                                "eng": "Chondrite-fusion crust",
+                                "fr": "Croûte de fusion de chondrite"
+                            },
+                            "description": {
+                                "eng": "A piece of fusion crust that became detached from a chondrite.",
+                                "fr": ""
+                            },
+                            "classCodes": [
+                                "Chondrite-fusion crust"
+                            ],
+                            "regex": {
+                                "self": "^Chondrite-fusion crust+$"
+                            },
+                            "mindat_id": "49517"
+                        },
+                        {
+                            "name": {
+                                "eng": "Ungrouped chondrite",
+                                "fr": "Chondrite non-groupée"
+                            },
+                            "classCodes": [
+                                "Chondrite-ung"
+                            ],
+                            "regex": {
+                                "self": "^Chondrite-ung+$"
+                            },
+                            "mindat_id": "49518"
+                        }
+                    ]
+                },
+                {
+                    "name": {
+                        "eng": "Achondrite",
+                        "fr": "Achondrite"
+                    },
+                    "description": {
+                        "eng": "A stony meteorite that lacks chondrules.",
+                        "fr": ""
+                    },
+                    "classCodes": [],
+                    "regex": {
+                        "selfAndChildren": "^Howardite.*|^Eucrite.*|^Diogenite.*|^Aubrite.*|^Angrite.*|^Lunar.*|^Martian.*|^Achondrite-ung+$|^Enst achon-ung+$|^Enst achon+$|^Achondrite-prim|Acapulcoite|[L|l]odranite.*|^Brachinite.*|^Ureilite.*|^Winonaite.*"
+                    },
+                    "mindat_id": "",
+                    "children": [
+                        {
+                            "name": {
+                                "eng": "Differenciated achondrite",
+                                "fr": "Achondrite différenciée"
+                            },
+                            "description": {
+                                "eng": "A stony meteorite that lacks chondrules and originated on a differentiated parent body.",
+                                "fr": ""
+                            },
+                            "regex": {
+                                "children": "^Howardite.*|^Eucrite.*|^Diogenite.*|^Aubrite.*|^Angrite.*|^Lunar.*|^Martian.*|^Achondrite-ung+$|^Enst achon-ung+$|^Enst achon+$"
+                            },
+                            "classCodes": [],
+                            "mindat_id": "50269",
+                            "children": [
+                                {
+                                    "name": {
+                                        "eng": "Asteroidal achondrite",
+                                        "fr": "Achondrite astéroïdale"
+                                    },
+                                    "classCodes": [],
+                                    "regex": {
+                                        "children": "^Angrite.*|^Aubrite.*|^Diogenite.*|^Eucrite.*|^Howardite.*"
+                                    },
+                                    "mindat_id": "50270",
+                                    "children": [
+                                        {
+                                            "name": {
+                                                "eng": "Angrite",
+                                                "fr": "Angrite"
+                                            },
+                                            "classCodes": [
+                                                "Angrite"
+                                            ],
+                                            "regex": {
+                                                "self": "^Angrite+$",
+                                                "selfAndChildren": "^Angrite.*"
+                                            },
+                                            "mindat_id": "49872",
+                                            "abbrv": "ANG"
+                                        },
+                                        {
+                                            "name": {
+                                                "eng": "Aubrite",
+                                                "fr": "Aubrite"
+                                            },
+                                            "classCodes": [
+                                                "Aubrite"
+                                            ],
+                                            "regex": {
+                                                "self": "^Aubrite.*",
+                                                "selfAndChildren": "^Aubrite.*"
+                                            },
+                                            "mindat_id": "49873",
+                                            "children": [
+                                                {
+                                                    "name": {
+                                                        "eng": "Anomalous aubrite",
+                                                        "fr": "Aubrite anormale"
+                                                    },
+                                                    "classCodes": [
+                                                        "Aubrite-an"
+                                                    ],
+                                                    "regex": {
+                                                        "self": "^Aubrite-an+$"
+                                                    },
+                                                    "mindat_id": "52372"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "name": {
+                                                "eng": "HED achondrite",
+                                                "fr": "Achondrite HED"
+                                            },
+                                            "classCodes": [],
+                                            "regex": {
+                                                "children": "^Howardite.*|^Eucrite.*|^Diogenite.*"
+                                            },
+                                            "mindat_id": "49877",
+                                            "children": [
+                                                {
+                                                    "name": {
+                                                        "eng": "Howardite",
+                                                        "fr": "Howardite"
+                                                    },
+                                                    "classCodes": [
+                                                        "Howardite"
+                                                    ],
+                                                    "regex": {
+                                                        "selfAndChildren": "^Howardite.*"
+                                                    },
+                                                    "mindat_id": "49878",
+                                                    "children": [
+                                                        {
+                                                            "name": {
+                                                                "eng": "Anomalous howardite",
+                                                                "fr": "Howardite anormale"
+                                                            },
+                                                            "classCodes": [
+                                                                "Howardite-an"
+                                                            ],
+                                                            "regex": {
+                                                                "self": "^Howardite-an+$"
+                                                            },
+                                                            "mindat_id": "49879"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "name": {
+                                                        "eng": "Eucrite",
+                                                        "fr": "Eucrite"
+                                                    },
+                                                    "classCodes": [
+                                                        "Eucrite"
+                                                    ],
+                                                    "regex": {
+                                                        "selfAndChildren": "^Eucrite.*"
+                                                    },
+                                                    "mindat_id": "49880",
+                                                    "children": [
+                                                        {
+                                                            "name": {
+                                                                "eng": "Anomalous eucrite",
+                                                                "fr": "Eucrite anormale"
+                                                            },
+                                                            "classCodes": [
+                                                                "Eucrite-an"
+                                                            ],
+                                                            "regex": {
+                                                                "self": "^Eucrite-an+$"
+                                                            },
+                                                            "mindat_id": "49881"
+                                                        },
+                                                        {
+                                                            "name": {
+                                                                "eng": "Eucrite breccia",
+                                                                "fr": "Eucrite bréchique"
+                                                            },
+                                                            "classCodes": [
+                                                                "Eucrite-br"
+                                                            ],
+                                                            "regex": {
+                                                                "self": "^Eucrite-br+$",
+                                                                "selfAndChildren": "^Eucrite-(pmict|br|mmict)$"
+                                                            },
+                                                            "mindat_id": "49882",
+                                                            "children": [
+                                                                {
+                                                                    "name": {
+                                                                        "eng": "Brecciated monomict eucrite",
+                                                                        "fr": "Eucrite bréchique monomicte"
+                                                                    },
+                                                                    "classCodes": [
+                                                                        "Eucrite-mmict"
+                                                                    ],
+                                                                    "regex": {
+                                                                        "self": "^Eucrite-mmict+$"
+                                                                    },
+                                                                    "mindat_id": "49886"
+                                                                },
+                                                                {
+                                                                    "name": {
+                                                                        "eng": "Brecciated polymicte eucrite",
+                                                                        "fr": "Eucrite bréchique polymicte"
+                                                                    },
+                                                                    "classCodes": [
+                                                                        "Eucrite-pmict"
+                                                                    ],
+                                                                    "regex": {
+                                                                        "self": "^Eucrite-pmict+$"
+                                                                    },
+                                                                    "mindat_id": "49887"
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "name": {
+                                                                "eng": "Eucrite cumulate",
+                                                                "fr": "Eucrite cumulée"
+                                                            },
+                                                            "classCodes": [
+                                                                "Eucrite-cm"
+                                                            ],
+                                                            "regex": {
+                                                                "self": "^Eucrite-cm+$"
+                                                            },
+                                                            "mindat_id": "49883"
+                                                        },
+                                                        {
+                                                            "name": {
+                                                                "eng": "Eucrite melt breccia",
+                                                                "fr": "Eucrite bréchique mixte"
+                                                            },
+                                                            "classCodes": [
+                                                                "Eucrite-melt breccia"
+                                                            ],
+                                                            "regex": {
+                                                                "self": "^Eucrite-melt breccia+$"
+                                                            },
+                                                            "mindat_id": "49884"
+                                                        },
+                                                        {
+                                                            "name": {
+                                                                "eng": "Mg-rich eucrite",
+                                                                "fr": "Eucrite riche en Mg"
+                                                            },
+                                                            "classCodes": [
+                                                                "Eucrite-Mg rich"
+                                                            ],
+                                                            "regex": {
+                                                                "self": "^Eucrite-Mg rich+$"
+                                                            },
+                                                            "mindat_id": "49885"
+                                                        },
+                                                        {
+                                                            "name": {
+                                                                "eng": "Unbrecciated eucrite",
+                                                                "fr": "Eucrite non-bréchique"
+                                                            },
+                                                            "classCodes": [
+                                                                "Eucrite-unbr"
+                                                            ],
+                                                            "regex": {
+                                                                "self": "^Eucrite-unbr+$"
+                                                            },
+                                                            "mindat_id": "49888"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "name": {
+                                                        "eng": "Diogenite",
+                                                        "fr": "Diogénite"
+                                                    },
+                                                    "classCodes": [
+                                                        "Diogenite",
+                                                        "Diogenite-an",
+                                                        "Diogenite-olivine",
+                                                        "Diogenite-pm"
+                                                    ],
+                                                    "regex": {
+                                                        "selfAndChildren": "^Diogenite.*"
+                                                    },
+                                                    "mindat_id": "49889"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": {
+                                        "eng": "Lunar achondrite",
+                                        "fr": "Achondrite lunaire"
+                                    },
+                                    "classCodes": [
+                                        "Lunar"
+                                    ],
+                                    "regex": {
+                                        "selfAndChildren": "^Lunar.*"
+                                    },
+                                    "mindat_id": "50275",
+                                    "children": [
+                                        {
+                                            "name": {
+                                                "eng": "Anorthositic Lunar",
+                                                "fr": "Lunaire anorthositique"
+                                            },
+                                            "classCodes": [
+                                                "Lunar (anorth)"
+                                            ],
+                                            "regex": {
+                                                "self": "^Lunar \\(anorth\\)+$"
+                                            },
+                                            "mindat_id": "49950"
+                                        },
+                                        {
+                                            "name": {
+                                                "eng": "Trocolitic anorthositic Lunar",
+                                                "fr": "Lunaire anorthositique trocolitique"
+                                            },
+                                            "classCodes": [
+                                                "Lunar (troct. anorth.)"
+                                            ],
+                                            "regex": {
+                                                "self": "^Lunar \\(troct. anorth.\\)+$"
+                                            },
+                                            "mindat_id": "49959"
+                                        },
+                                        {
+                                            "name": {
+                                                "eng": "Basaltic Lunar",
+                                                "fr": "Lunaire basaltique"
+                                            },
+                                            "classCodes": [
+                                                "Lunar (basalt)"
+                                            ],
+                                            "regex": {
+                                                "self": "^Lunar \\(basalt\\)+$",
+                                                "selfAndChildren": "^Lunar.*bas.*"
+                                            },
+                                            "mindat_id": "49955",
+                                            "children": [
+                                                {
+                                                    "name": {
+                                                        "eng": "Basaltic anorthositic Lunar",
+                                                        "fr": "Lunaire basaltique anorthositique"
+                                                    },
+                                                    "classCodes": [
+                                                        "Lunar (bas/anor)"
+                                                    ],
+                                                    "regex": {
+                                                        "self": "^Lunar \\(bas\/anor\\)+$"
+                                                    },
+                                                    "mindat_id": "49952"
+                                                },
+                                                {
+                                                    "name": {
+                                                        "eng": "Basaltic breccia Lunar",
+                                                        "fr": "Lunaire bréchique basaltique"
+                                                    },
+                                                    "classCodes": [
+                                                        "Lunar (bas. breccia)"
+                                                    ],
+                                                    "regex": {
+                                                        "selfAndChildren": "^Lunar \\(bas(?:\\. breccia|\/gab brec)\\)$"
+                                                    },
+                                                    "mindat_id": "49951",
+                                                    "children": [
+                                                        {
+                                                            "name": {
+                                                                "eng": "Basaltic and gabbroic Lunar breccia",
+                                                                "fr": "Lunaire bréchique basaltique & gabbroïque"
+                                                            },
+                                                            "classCodes": [
+                                                                "Lunar (bas/gab brec)"
+                                                            ],
+                                                            "regex": {
+                                                                "self": "^Lunar (bas/gab brec)"
+                                                            },
+                                                            "mindat_id": "49953"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "name": {
+                                                "eng": "Feldspathic breccia Lunar",
+                                                "fr": "Lunaire bréchique feldspathique"
+                                            },
+                                            "classCodes": [
+                                                "Lunar (feldsp. breccia)"
+                                            ],
+                                            "regex": {
+                                                "self": "^Lunar (feldsp. breccia)"
+                                            },
+                                            "mindat_id": "49954"
+                                        },
+                                        {
+                                            "name": {
+                                                "eng": "Gabbroic Lunar",
+                                                "fr": "Lunaire gabbroïque"
+                                            },
+                                            "classCodes": [
+                                                "Lunar (gabbro)"
+                                            ],
+                                            "regex": {
+                                                "self": "^Lunar (gabbro)+$",
+                                                "selfAndChildren": "^Lunar.*gabbro.*"
+                                            },
+                                            "mindat_id": "49956",
+                                            "children": [
+                                                {
+                                                    "name": {
+                                                        "eng": "Olivine-bearing gabbroic Lunar",
+                                                        "fr": "Lunaire gabbroïque à olivine"
+                                                    },
+                                                    "classCodes": [],
+                                                    "regex": {
+                                                        "self": "^Lunar (olivine gabbro)"
+                                                    },
+                                                    "mindat_id": "49958"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "name": {
+                                                "eng": "Noritic Lunar",
+                                                "fr": "Lunaire noritique"
+                                            },
+                                            "classCodes": [
+                                                "Lunar (norite)"
+                                            ],
+                                            "regex": {
+                                                "self": "^Lunar (norite)"
+                                            },
+                                            "mindat_id": "49957"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": {
+                                        "eng": "Martian achondrite (SNC)",
+                                        "fr": "Achondrite martienne (SNC)"
+                                    },
+                                    "classCodes": [
+                                        "Martian"
+                                    ],
+                                    "regex": {
+                                        "selfAndChildren": "^Martian.*"
+                                    },
+                                    "mindat_id": "49938",
+                                    "children": [
+                                        {
+                                            "name": {
+                                                "eng": "Chassignite",
+                                                "fr": "Chassignite"
+                                            },
+                                            "classCodes": [
+                                                "Martian (chassignite)"
+                                            ],
+                                            "regex": {
+                                                "self": "^Martian (chassignite)"
+                                            },
+                                            "mindat_id": "49947"
+                                        },
+                                        {
+                                            "name": {
+                                                "eng": "Nakhlite",
+                                                "fr": "Nakhlite"
+                                            },
+                                            "classCodes": [
+                                                "Martian (nakhlite)"
+                                            ],
+                                            "regex": {
+                                                "self": "^Martian (nakhlite)"
+                                            },
+                                            "mindat_id": "49945"
+                                        },
+                                        {
+                                            "name": {
+                                                "eng": "Shergottite",
+                                                "fr": "Shergottite"
+                                            },
+                                            "classCodes": [
+                                                "Martian (shergottite)"
+                                            ],
+                                            "regex": {
+                                                "self": "^Martian (shergottite)",
+                                                "selfAndChildren": "^Martian (shergottite)"
+                                            },
+                                            "mindat_id": "49939",
+                                            "children": [
+                                                {
+                                                    "name": {
+                                                        "eng": "Basaltic shergottite",
+                                                        "fr": "Shergottite basaltique"
+                                                    },
+                                                    "classCodes": [],
+                                                    "mindat_id": "49941",
+                                                    "exclude": true
+                                                },
+                                                {
+                                                    "name": {
+                                                        "eng": "Lherzolitic shergottite",
+                                                        "fr": "Shergottite lherzolitique"
+                                                    },
+                                                    "classCodes": [],
+                                                    "mindat_id": "49944",
+                                                    "exclude": true
+                                                },
+                                                {
+                                                    "name": {
+                                                        "eng": "Olivine-phyric shergottite",
+                                                        "fr": "Shergottite olivine-phyrique"
+                                                    },
+                                                    "classCodes": [],
+                                                    "mindat_id": "49942",
+                                                    "exclude": true
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "name": {
+                                                "eng": "Orthopyrexene-riche Martian",
+                                                "fr": "Martienne riche en orthopyroxène"
+                                            },
+                                            "classCodes": [
+                                                "Martian (OPX)"
+                                            ],
+                                            "regex": {
+                                                "self": "^Martian (OPX)"
+                                            },
+                                            "mindat_id": "49942"
+                                        },
+                                        {
+                                            "name": {
+                                                "eng": "Basaltic breccia Martian",
+                                                "fr": "Martienne basaltique bréchique"
+                                            },
+                                            "classCodes": [
+                                                "Martian (basaltic breccia)"
+                                            ],
+                                            "regex": {
+                                                "self": "^Martian (basaltic breccia)"
+                                            },
+                                            "mindat_id": "52198"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": {
+                                        "eng": "Ungrouped achondrite",
+                                        "fr": "Achondrite non-groupée"
+                                    },
+                                    "classCodes": [
+                                        "Achondrite-ung"
+                                    ],
+                                    "regex": {
+                                        "self": "^Achondrite-ung+$"
+                                    },
+                                    "mindat_id": "52201"
+                                },
+                                {
+                                    "name": {
+                                        "eng": "Ungrouped enstatite-rich achondrite",
+                                        "fr": "Achondrite riche en enstatique non-groupée"
+                                    },
+                                    "classCodes": [
+                                        "Enst achon-ung"
+                                    ],
+                                    "regex": {
+                                        "self": "^Enst achon-ung+$"
+                                    },
+                                    "mindat_id": "49876"
+                                },
+                                {
+                                    "name": {
+                                        "eng": "Enstatite-rich achondrite",
+                                        "fr": "Achondrite riche en enstatique"
+                                    },
+                                    "classCodes": [
+                                        "Enst achon"
+                                    ],
+                                    "regex": {
+                                        "self": "^Enst achon+$"
+                                    },
+                                    "mindat_id": "49875"
+                                }
+                            ]
+                        },
+                        {
+                            "name": {
+                                "eng": "Primitive achondrite",
+                                "fr": "Achondrite primitive"
+                            },
+                            "description": {
+                                "eng": "A meteorite that has lost its chondritic texture due to heating and partial melting, but still has nearly chondritic composition.",
+                                "fr": ""
+                            },
+                            "classCodes": [
+                                "Achondrite-prim"
+                            ],
+                            "regex": {
+                                "self": "^Achondrite-prim+$",
+                                "selfAndChildren": "^Achondrite-prim|Acapulcoite|[L|l]odranite.*|^Brachinite.*|^Ureilite.*|^Winonaite.*"
+                            },
+                            "mindat_id": "49847",
+                            "children": [
+                                {
+                                    "name": {
+                                        "eng": "Acapulcoite / Lodranite",
+                                        "fr": "Acapulcoïte / Lodranite"
+                                    },
+                                    "description": {
+                                        "eng": "Acapulcoites, named after the Acapulco, Mexico, fall of 1913, and lodranites, named after the Lodran, Pakistan, fall of 1868, are closely related, equigranular meteorites; acapulcoites are finer grained than lodranites and contain rare, relict chondrules, and there are transitional meteorites between the two types (e.g., EET 84302, GRA 95209). Mineral assemblages are similar to, but distinct from those of ordinary chondrites. Compositions are subchondritic, with lodranites showing a higher degree of fractionation.",
+                                        "fr": ""
+                                    },
+                                    "classCodes": [
+                                        "Acapulcoite/Lodranite",
+                                        "Acapulcoite/lodranite"
+                                    ],
+                                    "regex": {
+                                        "selfAndChildren": "Acapulcoite|[Ll]odranite"
+                                    },
+                                    "mindat_id": "49848",
+                                    "children": [
+                                        {
+                                            "name": {
+                                                "eng": "Acapulcoite",
+                                                "fr": "Acapulcoïte"
+                                            },
+                                            "description": {
+                                                "eng": "Acapulcoites, named after the Acapulco, Mexico, fall of 1913. Contain rare, relict chondrules, and there are transitional meteorites between the two types (e.g., EET 84302, GRA 95209). Mineral assemblages are similar to, but distinct from those of ordinary chondrites.",
+                                                "fr": ""
+                                            },
+                                            "classCodes": [
+                                                "Acapulcoite"
+                                            ],
+                                            "regex": {
+                                                "self": "^Acapulcoite+$"
+                                            },
+                                            "mindat_id": "49848"
+                                        },
+                                        {
+                                            "name": {
+                                                "eng": "Lodranite",
+                                                "fr": "Lodranite"
+                                            },
+                                            "description": {
+                                                "eng": "Lodranites, named after the Lodran, Pakistan, fall of 1868. They show a higher degree of fractionation.",
+                                                "fr": ""
+                                            },
+                                            "classCodes": [
+                                                "Lodranite"
+                                            ],
+                                            "regex": {
+                                                "selfAndChildren": "^Lodranite.*"
+                                            },
+                                            "mindat_id": "11263",
+                                            "children": [
+                                                {
+                                                    "name": {
+                                                        "eng": "Anorthositic lodranite",
+                                                        "fr": "Lodranite anorthositique"
+                                                    },
+                                                    "classCodes": [
+                                                        "Lodranite-an"
+                                                    ],
+                                                    "regex": {
+                                                        "self": "^Lodranite-an"
+                                                    },
+                                                    "mindat_id": "11263"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": {
+                                        "eng": "Brachinite",
+                                        "fr": "Brachinite"
+                                    },
+                                    "description": {
+                                        "eng": "Brachinites, named after Brachina, a meteorite found in Australia in 1974, are olivine-rich achondrites that are relatively close to chondrites in many compositional properties, and so are frequently considered to be primitive achondrites. Their true origin is still an open question and not all brachinites may share the same origin.",
+                                        "fr": ""
+                                    },
+                                    "regex": {
+                                        "self": "^Brachinite+$",
+                                        "selfAndChildren": "^Brachinite.*"
+                                    },
+                                    "classCodes": [
+                                        "Brachinite"
+                                    ],
+                                    "mindat_id": "49850"
+                                },
+                                {
+                                    "name": {
+                                        "eng": "Ureilite",
+                                        "fr": "Ureilite"
+                                    },
+                                    "description": {
+                                        "eng": "Ureilites, named after the Novo-Urei, Russia, fall of 1886, are ultramafic achondrites that contain interstitial carbon as graphite or diamond. The majority consist of olivine + uninverted pigeonite. In a few, the pyroxene is augite and/or orthopyroxene instead. In addition, about 10% of ureilites are polymict breccias, containing a few percent of feldspathic material in addition to typical ureilitic components. ",
+                                        "fr": ""
+                                    },
+                                    "classCodes": [],
+                                    "regex": {
+                                        "self": "^Ureilite+$",
+                                        "selfAndChildren": "^Ureilite.*"
+                                    },
+                                    "mindat_id": "49866"
+                                },
+                                {
+                                    "name": {
+                                        "eng": "Winonaite",
+                                        "fr": "Winonaïte"
+                                    },
+                                    "description": {
+                                        "eng": "Winonaites, named after the Winona, Arizona, find of 1928, are equigranular rocks, some of which may contain relict chondrules, that have mineralogy and composition that are similar to chondrites.The mineral assemblage is more reduced than that of H chondrites. Winonaites are related to the silicate inclusions found in IAB complex irons.",
+                                        "fr": ""
+                                    },
+                                    "classCodes": [],
+                                    "regex": {
+                                        "self": "^Winonaite+$",
+                                        "selfAndChildren": "^Winonaite.*"
+                                    },
+                                    "mindat_id": "49869"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": {
+                        "eng": "Unclassified stone",
+                        "fr": "Pierreuse non-classifiée"
+                    },
+                    "classCodes": [
+                        "Stone-uncl"
+                    ],
+                    "regex": {
+                        "self": "^Stone-uncl+$"
+                    },
+                    "mindat_id": "52369"
+                },
+                {
+                    "name": {
+                        "eng": "Ungrouped stone",
+                        "fr": "Pierreuse non-groupée"
+                    },
+                    "classCodes": [
+                        "Stone-ung"
+                    ],
+                    "regex": {
+                        "self": "^Stone-ung+$"
+                    },
+                    "mindat_id": ""
+                }
+            ]
+        },
+        {
+            "name": {
+                "eng": "Iron",
+                "fr": "Ferreuses"
+            },
+            "description": {
+                "eng": "A meteorite that is dominantly composed of Fe-Ni metal and that crystallized from a melt.",
+                "fr": ""
+            },
+            "regex": {
+                "self": "^Iron+$",
+                "selfAndChildren": "^Iron.*"
+            },
+            "classCodes": [],
+            "mindat_id": "49960",
+            "children": [
+                {
+                    "name": {
+                        "eng": "Iron (by chemical composition)",
+                        "fr": "Ferreuses (par composition chimique)"
+                    },
+                    "label": {
+                        "eng": "By chemical composition",
+                        "fr": "Par composition chimique"
+                    },
+                    "classCodes": [],
+                    "regex": {
+                        "self": "^Iron+$",
+                        "selfAndChildren": "^Iron.*"
+                    },
+                    "mindat_id": "49919",
+                    "children": [
+                        {
+                            "name": {
+                                "eng": "IAB complex iron",
+                                "fr": "Ferreuse IAB complexe"
+                            },
+                            "description": {
+                                "eng": "An association of iron meteorites, including the former groups IAB and IIICD. The new term \"IAB complex\" includes a variety of newly defined groups, including the \"IAB main group\", grouplets, and ungrouped meteorites (see Wasson and Kallemeyn (2002) Geochimica et Cosmochimica Acta, Vol. 66, No. 13, pp. 2445-2473.",
+                                "fr": "Ferreuse IAB complexe"
+                            },
+                            "label": {
+                                "eng": "IAB complex",
+                                "fr": "IAB complexe"
+                            },
+                            "classCodes": [
+                                "Iron, IAB complex"
+                            ],
+                            "regex": {
+                                "self": "^Iron, IAB complex+$",
+                                "selfAndChildren": "^Iron, IAB.*"
+                            },
+                            "mindat_id": "49851",
+                            "children": [
+                                {
+                                    "name": {
+                                        "eng": "Anorthositic IAB",
+                                        "fr": "IAB anorthositique"
+                                    },
+                                    "classCodes": [
+                                        "Iron, IAB-an"
+                                    ],
+                                    "regex": {
+                                        "self": "^Iron, IAB-an+$"
+                                    },
+                                    "mindat_id": "49852"
+                                },
+                                {
+                                    "name": {
+                                        "eng": "IAB-MG",
+                                        "fr": "IAB-MG"
+                                    },
+                                    "description": {
+                                        "eng": "An iron meteorite belonging to the main group (MG) of the IAB complex.",
+                                        "fr": ""
+                                    },
+                                    "classCodes": [
+                                        "Iron, IAB-MG"
+                                    ],
+                                    "regex": {
+                                        "self": "^Iron, IAB-MG+$"
+                                    },
+                                    "mindat_id": "49852"
+                                },
+                                {
+                                    "name": {
+                                        "eng": "IAB-sHH",
+                                        "fr": "IAB-sHH"
+                                    },
+                                    "description": {
+                                        "eng": "An iron meteorite belonging to the high-Au, high-Ni subgroup (sHH) of the IAB complex",
+                                        "fr": ""
+                                    },
+                                    "classCodes": [
+                                        "Iron, IAB-sHH"
+                                    ],
+                                    "regex": {
+                                        "self": "^Iron, IAB-sHH+$"
+                                    },
+                                    "mindat_id": "49861"
+                                },
+                                {
+                                    "name": {
+                                        "eng": "IAB-sHL",
+                                        "fr": "IAB-sHL"
+                                    },
+                                    "description": {
+                                        "eng": "An iron meteorite belonging to the high-Au, low-Ni subgroup (sHL) of the IAB complex.",
+                                        "fr": ""
+                                    },
+                                    "classCodes": [
+                                        "Iron, IAB-sHL"
+                                    ],
+                                    "regex": {
+                                        "self": "^Iron, IAB-sHL+$",
+                                        "selfAndChildren": "^Iron, IAB-sHL.*"
+                                    },
+                                    "mindat_id": "49859",
+                                    "children": [
+                                        {
+                                            "name": {
+                                                "eng": "Anorthositic IAB-sHL",
+                                                "fr": "IAB-sHL anorthositic"
+                                            },
+                                            "classCodes": [
+                                                "Iron, IAB-sHL-an"
+                                            ],
+                                            "regex": {
+                                                "self": "^Iron, IAB-sHL-an+$"
+                                            },
+                                            "mindat_id": "49857"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": {
+                                        "eng": "IAB-sLH",
+                                        "fr": "IAB-sLH"
+                                    },
+                                    "description": {
+                                        "eng": "An iron meteorite belonging to the low-Au, high-Ni subgroup (sLH) of the IAB complex.",
+                                        "fr": ""
+                                    },
+                                    "classCodes": [
+                                        "Iron, IAB-sLH"
+                                    ],
+                                    "regex": {
+                                        "self": "^Iron, IAB-sLH+$"
+                                    },
+                                    "mindat_id": "49857"
+                                },
+                                {
+                                    "name": {
+                                        "eng": "IAB-sLL",
+                                        "fr": "IAB-sLL"
+                                    },
+                                    "description": {
+                                        "eng": "An iron meteorite belonging to the low-Au, low-Ni subgroup (sLL) of the IAB complex.",
+                                        "fr": ""
+                                    },
+                                    "classCodes": [
+                                        "Iron, IAB-sLL"
+                                    ],
+                                    "regex": {
+                                        "self": "^Iron, IAB-sLL+$"
+                                    },
+                                    "mindat_id": "49853"
+                                },
+                                {
+                                    "name": {
+                                        "eng": "IAB-sLM",
+                                        "fr": "IAB-sLM"
+                                    },
+                                    "description": {
+                                        "eng": "An iron meteorite belonging to the low-Au, medium-Ni subgroup (sLM) of the IAB complex.",
+                                        "fr": ""
+                                    },
+                                    "classCodes": [
+                                        "Iron, IAB-sLM"
+                                    ],
+                                    "regex": {
+                                        "self": "^Iron, IAB-sLM+$"
+                                    },
+                                    "mindat_id": "49854"
+                                },
+                                {
+                                    "name": {
+                                        "eng": "IAB ungrouped",
+                                        "fr": "IAB non-groupée"
+                                    },
+                                    "classCodes": [
+                                        "Iron, IAB-ung"
+                                    ],
+                                    "regex": {
+                                        "self": "^Iron, IAB-ung+$"
+                                    },
+                                    "mindat_id": "49854"
+                                },
+                                {
+                                    "name": {
+                                        "eng": "Possibly IAB",
+                                        "fr": "Possiblement IAB"
+                                    },
+                                    "description": {
+                                        "eng": "An iron meteorite possibly belonging to chemical group IAB.",
+                                        "fr": ""
+                                    },
+                                    "classCodes": [
+                                        "Iron, IAB?"
+                                    ],
+                                    "regex": {
+                                        "self": "^Iron, IAB?+$"
+                                    },
+                                    "mindat_id": "49854"
+                                }
+                            ]
+                        },
+                        {
+                            "name": {
+                                "eng": "IC iron",
+                                "fr": "Ferreuse IC"
+                            },
+                            "label": {
+                                "eng": "IC",
+                                "fr": "IC"
+                            },
+                            "description": {
+                                "eng": "An iron meteorite belonging to chemical group IC.",
+                                "fr": ""
+                            },
+                            "classCodes": [
+                                "Iron, IC"
+                            ],
+                            "regex": {
+                                "self": "^Iron, IC+$",
+                                "selfAndChildren": "^Iron, IC.*"
+                            },
+                            "mindat_id": "49920",
+                            "children": [
+                                {
+                                    "name": {
+                                        "eng": "Anorthositic IC",
+                                        "fr": "IC anorthositique"
+                                    },
+                                    "classCodes": [
+                                        "Iron, IC-an"
+                                    ],
+                                    "regex": {
+                                        "self": "^Iron, IC-an+$"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": {
+                                "eng": "IIAB iron",
+                                "fr": "Ferreuse IIAB"
+                            },
+                            "description": {
+                                "eng": "An iron meteorite belonging to chemical group IIAB.",
+                                "fr": ""
+                            },
+                            "label": {
+                                "eng": "IIAB",
+                                "fr": "IIAB"
+                            },
+                            "classCodes": [
+                                "Iron, IIAB"
+                            ],
+                            "regex": {
+                                "self": "^Iron, IIAB+$",
+                                "selfAndChildren": "^Iron, IIAB.*"
+                            },
+                            "mindat_id": "49922",
+                            "children": [
+                                {
+                                    "name": {
+                                        "eng": "Anorthositic IIAB",
+                                        "fr": "IIAB anorthositique"
+                                    },
+                                    "classCodes": [
+                                        "Iron, IIAB-an"
+                                    ],
+                                    "regex": {
+                                        "self": "^Iron, IIAB-an+$"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": {
+                                "eng": "IIC iron meteorite",
+                                "fr": "Ferreuse IIC"
+                            },
+                            "description": {
+                                "eng": "An iron meteorite belonging to chemical group IIC.",
+                                "fr": ""
+                            },
+                            "label": {
+                                "eng": "IIC",
+                                "fr": "IIC"
+                            },
+                            "classCodes": [
+                                "Iron, IIC"
+                            ],
+                            "regex": {
+                                "self": "^Iron, IIC+$",
+                                "selfAndChildren": "^Iron, IIC.*"
+                            },
+                            "mindat_id": "49924"
+                        },
+                        {
+                            "name": {
+                                "eng": "IID iron meteorite",
+                                "fr": "Ferreuse IID"
+                            },
+                            "description": {
+                                "eng": "An iron meteorite belonging to chemical group IID.",
+                                "fr": ""
+                            },
+                            "label": {
+                                "eng": "IID",
+                                "fr": "IID"
+                            },
+                            "classCodes": [
+                                "Iron, IID"
+                            ],
+                            "regex": {
+                                "self": "^Iron, IID+$",
+                                "selfAndChildren": "^Iron, IID.*"
+                            },
+                            "mindat_id": "49925",
+                            "children": [
+                                {
+                                    "name": {
+                                        "eng": "Anorthositic IID",
+                                        "fr": "IID anorthositique"
+                                    },
+                                    "classCodes": [
+                                        "Iron, IID-an"
+                                    ],
+                                    "regex": {
+                                        "self": "^Iron, IID-an+$",
+                                        "selfAndChildren": "^Iron, IID-an.*"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": {
+                                "eng": "IIE iron meteorite",
+                                "fr": "Ferreuse IIE"
+                            },
+                            "description": {
+                                "eng": "An iron meteorite belonging to chemical group IIE.",
+                                "fr": ""
+                            },
+                            "label": {
+                                "eng": "IIE",
+                                "fr": "IIE"
+                            },
+                            "classCodes": [
+                                "Iron, IIE"
+                            ],
+                            "regex": {
+                                "self": "^Iron, IIE+$",
+                                "selfAndChildren": "^Iron, IIE.*"
+                            },
+                            "mindat_id": "49927",
+                            "children": [
+                                {
+                                    "name": {
+                                        "eng": "Anorthositic IIE",
+                                        "fr": "IIE anorthositique"
+                                    },
+                                    "classCodes": [
+                                        "Iron, IIE-an"
+                                    ],
+                                    "regex": {
+                                        "self": "^Iron, IIE-an+$",
+                                        "selfAndChildren": "^Iron, IIE-an"
+                                    }
+                                },
+                                {
+                                    "name": {
+                                        "eng": "Possibly IIE",
+                                        "fr": "Possiblement IIE"
+                                    },
+                                    "classCodes": [
+                                        "Iron, IIE?"
+                                    ],
+                                    "regex": {
+                                        "self": "^Iron, IIE?+$",
+                                        "selfAndChildren": "^Iron, IIE?"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": {
+                                "eng": "IIF iron meteorite",
+                                "fr": "Ferreuse IIF"
+                            },
+                            "description": {
+                                "eng": "An iron meteorite belonging to chemical group IIF.",
+                                "fr": ""
+                            },
+                            "label": {
+                                "eng": "IIF",
+                                "fr": "IIF"
+                            },
+                            "classCodes": [
+                                "Iron, IIF"
+                            ],
+                            "regex": {
+                                "self": "^Iron, IIF+$",
+                                "selfAndChildren": "^Iron, IIF.*"
+                            },
+                            "mindat_id": "49929"
+                        },
+                        {
+                            "name": {
+                                "eng": "IIG iron meteorite",
+                                "fr": "Ferreuse IIG"
+                            },
+                            "description": {
+                                "eng": "An iron meteorite belonging to chemical group IIG.",
+                                "fr": ""
+                            },
+                            "label": {
+                                "eng": "IIG",
+                                "fr": "IIG"
+                            },
+                            "classCodes": [
+                                "Iron, IIG"
+                            ],
+                            "regex": {
+                                "self": "^Iron, IIG+$",
+                                "selfAndChildren": "^Iron, IIG.*"
+                            },
+                            "mindat_id": "52370",
+                            "mindat_example_photo_id": "971344"
+                        },
+                        {
+                            "name": {
+                                "eng": "IIIAB iron meteorite",
+                                "fr": "Ferreuse IIIAB"
+                            },
+                            "description": {
+                                "eng": "An iron meteorite belonging to chemical group IIIAB.",
+                                "fr": ""
+                            },
+                            "label": {
+                                "eng": "IIIAB",
+                                "fr": "IIIAB"
+                            },
+                            "classCodes": [
+                                "Iron, IIIAB"
+                            ],
+                            "regex": {
+                                "self": "^Iron, IIIAB+$",
+                                "selfAndChildren": "^Iron, IIIAB.*"
+                            },
+                            "mindat_id": "49930",
+                            "children": [
+                                {
+                                    "name": {
+                                        "eng": "Anorthositic IIIAB",
+                                        "fr": "IIIAB anorthositique"
+                                    },
+                                    "classCodes": [
+                                        "Iron, IIIAB-an"
+                                    ],
+                                    "regex": {
+                                        "self": "^Iron, IIIAB-an+$",
+                                        "selfAndChildren": "^Iron, IIIAB-an.*"
+                                    }
+                                },
+                                {
+                                    "name": {
+                                        "eng": "Possibly IIIAB",
+                                        "fr": "Possiblement IIIAB"
+                                    },
+                                    "classCodes": [
+                                        "Iron, IIIAB?"
+                                    ],
+                                    "regex": {
+                                        "self": "^Iron, IIIAB?+$",
+                                        "selfAndChildren": "^Iron, IIIAB?.*"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": {
+                                "eng": "IIICD iron",
+                                "fr": "Ferreuse IIICD"
+                            },
+                            "description": {
+                                "eng": "An iron meteorite belonging to chemical group IIICD.",
+                                "fr": ""
+                            },
+                            "label": {
+                                "eng": "IIICD",
+                                "fr": "IIICD"
+                            },
+                            "classCodes": [
+                                "Iron, IIICD"
+                            ],
+                            "regex": {
+                                "self": "^Iron, IIICD+$",
+                                "selfAndChildren": "^Iron, IIICD.*"
+                            },
+                            "mindat_id": "49864"
+                        },
+                        {
+                            "name": {
+                                "eng": "IIIE iron meteorite",
+                                "fr": "Ferreuse IIIE"
+                            },
+                            "description": {
+                                "eng": "An iron meteorite belonging to chemical group IIIE.",
+                                "fr": ""
+                            },
+                            "label": {
+                                "eng": "IIIE",
+                                "fr": "IIIE"
+                            },
+                            "classCodes": [
+                                "Iron, IIIE"
+                            ],
+                            "regex": {
+                                "self": "^Iron, IIIE+$",
+                                "selfAndChildren": "^Iron, IIIE.*"
+                            },
+                            "mindat_id": "49932"
+                        },
+                        {
+                            "name": {
+                                "eng": "IIIF iron meteorite",
+                                "fr": "Ferreuse IIIF"
+                            },
+                            "description": {
+                                "eng": "An iron meteorite belonging to chemical group IIIF.",
+                                "fr": ""
+                            },
+                            "label": {
+                                "eng": "IIIF",
+                                "fr": "IIIF"
+                            },
+                            "classCodes": [
+                                "Iron, IIIF"
+                            ],
+                            "regex": {
+                                "self": "^Iron, IIIF+$",
+                                "selfAndChildren": "^Iron, IIIF.*"
+                            },
+                            "mindat_id": "49934"
+                        },
+                        {
+                            "name": {
+                                "eng": "IVA iron meteorite",
+                                "fr": "Ferreuse IVA"
+                            },
+                            "description": {
+                                "eng": "An iron meteorite belonging to chemical group IVA.",
+                                "fr": ""
+                            },
+                            "label": {
+                                "eng": "IVA",
+                                "fr": "IVA"
+                            },
+                            "classCodes": [
+                                "Iron, IVA"
+                            ],
+                            "regex": {
+                                "self": "^Iron, IVA+$",
+                                "selfAndChildren": "^Iron, IVA.*"
+                            },
+                            "mindat_id": "49935"
+                        },
+                        {
+                            "name": {
+                                "eng": "IVB iron meteorite",
+                                "fr": "Ferreuse IVB"
+                            },
+                            "description": {
+                                "eng": "An iron meteorite belonging to chemical group IVB.",
+                                "fr": ""
+                            },
+                            "label": {
+                                "eng": "IVB",
+                                "fr": "IVB"
+                            },
+                            "classCodes": [
+                                "Iron, IVB"
+                            ],
+                            "regex": {
+                                "self": "^Iron, IVB+$",
+                                "selfAndChildren": "^Iron, IVB.*"
+                            },
+                            "mindat_id": "49937"
+                        },
+                        {
+                            "name": {
+                                "eng": "Unclassified iron",
+                                "fr": "Ferreuse non-classifiée"
+                            },
+                            "classCodes": [
+                                "Iron"
+                            ],
+                            "regex": {
+                                "self": "^Iron, ungrouped+$",
+                                "selfAndChildren": "^Iron, ungrouped.*"
+                            },
+                            "mindat_id": "49960"
+                        },
+                        {
+                            "name": {
+                                "eng": "Possibly iron",
+                                "fr": "Possiblement ferreuse"
+                            },
+                            "classCodes": [
+                                "Iron?"
+                            ],
+                            "regex": {
+                                "self": "^Iron?+$",
+                                "selfAndChildren": "^Iron?.*"
+                            },
+                            "mindat_id": ""
+                        }
+                    ]
+                },
+                {
+                    "name": {
+                        "eng": "Iron meteorite (by structure)",
+                        "fr": "Ferreuse (par structure)"
+                    },
+                    "classCodes": [],
+                    "exclude": true,
+                    "mindat_id": "49960",
+                    "children": [
+                        {
+                            "name": {
+                                "eng": "Ataxite",
+                                "fr": "Ataxite"
+                            },
+                            "description": {
+                                "eng": "Ataxites are a structural class of iron meteorites with a high nickel content and show no Widmanstätten patterns upon etching.\nAtaxites are the most nickel-rich meteorites known; they usually contain over 18% nickel. The high nickel content is the reason that they do not develop a Widmanstätten structure, because in this case kamacite can be exsolved from taenite only at such a low temperature (below about 600°C) where diffusion is already too slow.\nMost ataxites belong to the IVB group or are classified as \"Iron, ungrouped\" because they do not fit in any of the groups currently recognized by meteorite classification. Some ataxites belong to the IAB group and fall into the sHL (high-Au, low-Ni subgroup), sLH (low-Au, high-Ni subgroup), sHH (high-Au, high-Ni subgroup) and \"ung\" subgroup (does not fit any subgroup of IAB). Only a couple of ataxites have been classified into the IAB complex and the IIF, IVA, IIAB, IIIAB groups.",
+                                "fr": ""
+                            },
+                            "classCodes": [],
+                            "exclude": true,
+                            "mindat_id": "52787"
+                        },
+                        {
+                            "name": {
+                                "eng": "Catarinite",
+                                "fr": "Catarinite"
+                            },
+                            "description": {
+                                "eng": "An obsolete term for an iron meteorite remarkable for a high proportion of nickel.",
+                                "fr": ""
+                            },
+                            "classCodes": [],
+                            "exclude": true,
+                            "mindat_id": "52720"
+                        },
+                        {
+                            "name": {
+                                "eng": "Hexahedrite",
+                                "fr": "Hexahédrite"
+                            },
+                            "description": {
+                                "eng": "An older structural classification of iron meteorites based on the absence of the Widmanstätten pattern, which can be assessed from the appearance of polished cross-sections that have been etched with acid. They have a low abundance of nickel relative to iron. ",
+                                "fr": ""
+                            },
+                            "classCodes": [],
+                            "exclude": true,
+                            "mindat_id": "54117"
+                        },
+                        {
+                            "name": {
+                                "eng": "Magmatic iron meteorite",
+                                "fr": "Ferreuse magmatique"
+                            },
+                            "description": {
+                                "eng": "A meteorite that is dominantly composed of Fe-Ni metal and that crystallized from a melt.",
+                                "fr": ""
+                            },
+                            "classCodes": [],
+                            "exclude": true,
+                            "mindat_id": "49961"
+                        },
+                        {
+                            "name": {
+                                "eng": "Octahedrite",
+                                "fr": "Octahédrite"
+                            },
+                            "description": {
+                                "eng": "Octahedrite is a historical classification for iron meteorites based on structure. It shows a Widmanstätten pattern of kamacite exsolution lamellae out of taenite.\nSee also octahedrite (of Werner), a synonym of anatase.",
+                                "fr": ""
+                            },
+                            "classCodes": [],
+                            "exclude": true,
+                            "mindat_id": "54116"
+                        },
+                        {
+                            "name": {
+                                "eng": "Possible iron meteorite",
+                                "fr": "Possiblement ferreuse"
+                            },
+                            "description": {
+                                "eng": "A possible iron meteorite that has not been classified.",
+                                "fr": "Possiblement ferreuse"
+                            },
+                            "classCodes": [
+                                "Iron?"
+                            ],
+                            "exclude": true,
+                            "mindat_id": "52373"
+                        },
+                        {
+                            "name": {
+                                "eng": "Primitive iron meteorite",
+                                "fr": "Ferreuse primitive"
+                            },
+                            "classCodes": [],
+                            "exclude": true,
+                            "mindat_id": "49962"
+                        },
+                        {
+                            "name": {
+                                "eng": "Ungrouped iron meteorite",
+                                "fr": "Ferreuse non-groupée"
+                            },
+                            "description": {
+                                "eng": "An iron meteorite that does not fit into any of the established chemical groups.",
+                                "fr": ""
+                            },
+                            "classCodes": [],
+                            "exclude": true,
+                            "mindat_id": "52231"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": {
+                "eng": "Relict",
+                "fr": "Relique"
+            },
+            "description": {
+                "eng": "A highly altered object that is likely to have a meteoritic origin. These are dominantly (>95%) composed of secondary minerals formed from alteration after it landed.",
+                "fr": ""
+            },
+            "classCodes": [
+                "Relict meteorite"
+            ],
+            "regex": {
+                "selfAndChildren": "^Relict .*"
+            },
+            "mindat_id": "52237",
+            "children": [
+                {
+                    "name": {
+                        "eng": "Relict H",
+                        "fr": "H relique"
+                    },
+                    "description": {
+                        "eng": "A relict meteorite that originated as an H group ordinary chondrite.",
+                        "fr": ""
+                    },
+                    "classCodes": [
+                        "Relict H"
+                    ],
+                    "regex": {
+                        "self": "^Relict H+$",
+                        "selfAndChildren": "^Relict H.*"
+                    },
+                    "mindat_id": "52238"
+                },
+                {
+                    "name": {
+                        "eng": "Relict iron",
+                        "fr": "Ferreuse relique"
+                    },
+                    "description": {
+                        "eng": "A relict meteorite that originated as an iron meteorite.",
+                        "fr": ""
+                    },
+                    "classCodes": [
+                        "Relict iron"
+                    ],
+                    "regex": {
+                        "self": "^Relict iron+$",
+                        "selfAndChildren": "^Relict iron.*"
+                    },
+                    "mindat_id": "52239"
+                },
+                {
+                    "name": {
+                        "eng": "Relict OC",
+                        "fr": "OC relique"
+                    },
+                    "description": {
+                        "eng": "A relict meteorite that originated as an OC group ordinary chondrite.",
+                        "fr": ""
+                    },
+                    "classCodes": [
+                        "Relict OC"
+                    ],
+                    "regex": {
+                        "self": "^Relict OC+$",
+                        "selfAndChildren": "^Relict OC.*"
+                    },
+                    "mindat_id": "52240"
+                },
+                {
+                    "name": {
+                        "eng": "Relict ureilite",
+                        "fr": "Ureilite relique"
+                    },
+                    "description": {
+                        "eng": "A relict meteorite that originated as an ureilite meteorite.",
+                        "fr": ""
+                    },
+                    "classCodes": [
+                        "Relict ureilite"
+                    ],
+                    "regex": {
+                        "self": "^Relict ureilite+$",
+                        "selfAndChildren": "^Relict ureilite.*"
+                    },
+                    "mindat_id": "52241"
+                }
+            ]
+        },
+        {
+            "name": {
+                "eng": "Stony-iron",
+                "fr": "Mixte"
+            },
+            "description": {
+                "eng": "Stony-iron meteorites or siderolites are meteorites that consist of nearly equal parts of meteoric iron and silicates.",
+                "fr": "Météorite composée pour moitié d'un alliage fer-nickel et pour moitié de silicates. Il s'agit en fait d'une météorite pierreuse à incrustations métalliques."
+            },
+            "classCodes": [],
+            "regex": {
+                "children": "^Mesosiderite.*|^Pallasite.*"
+            },
+            "mindat_id": "49963",
+            "children": [
+                {
+                    "name": {
+                        "eng": "Mesosiderite",
+                        "fr": "Mésosidérite"
+                    },
+                    "description": {
+                        "eng": "A brecciated meteorite containing subequal silicate and metallic components; the silicates are dominantly igneous rock fragments.",
+                        "fr": ""
+                    },
+                    "classCodes": [
+                        "Mesosiderite"
+                    ],
+                    "regex": {
+                        "selfAndChildren": "^Mesosiderite.*"
+                    },
+                    "mindat_id": "49905",
+                    "children": [
+                        {
+                            "name": {
+                                "eng": "Mesosiderite-A",
+                                "fr": "Mésosidérite-A"
+                            },
+                            "classCodes": [
+                                "Mesosiderite-A"
+                            ],
+                            "regex": {
+                                "selfAndChildren": "^Mesosiderite-A.*"
+                            },
+                            "mindat_id": "49906",
+                            "children": [
+                                {
+                                    "name": {
+                                        "eng": "Mesosiderite-A1",
+                                        "fr": "Mésosidérite-A1"
+                                    },
+                                    "classCodes": [
+                                        "Mesosidérite-A1"
+                                    ],
+                                    "regex": {
+                                        "selfAndChildren": "^Mesosiderite-A1.*"
+                                    },
+                                    "mindat_id": "49907"
+                                },
+                                {
+                                    "name": {
+                                        "eng": "Mesosiderite-A2",
+                                        "fr": "Mésosidérite-A2"
+                                    },
+                                    "classCodes": [
+                                        "Mesosidérite-A2"
+                                    ],
+                                    "regex": {
+                                        "selfAndChildren": "^Mesosiderite-A2.*"
+                                    },
+                                    "mindat_id": "49908"
+                                },
+                                {
+                                    "name": {
+                                        "eng": "Mesosiderite-A3",
+                                        "fr": "Mésosidérite-A3"
+                                    },
+                                    "classCodes": [
+                                        "Mesosidérite-A3"
+                                    ],
+                                    "regex": {
+                                        "selfAndChildren": "^Mesosiderite-A3.*"
+                                    },
+                                    "mindat_id": "49909"
+                                },
+                                {
+                                    "name": {
+                                        "eng": "Mesosiderite-A4",
+                                        "fr": "Mésosidérite-A4"
+                                    },
+                                    "classCodes": [
+                                        "Mesosidérite-A4"
+                                    ],
+                                    "regex": {
+                                        "selfAndChildren": "^Mesosiderite-A4.*"
+                                    },
+                                    "mindat_id": "49910"
+                                }
+                            ]
+                        },
+                        {
+                            "name": {
+                                "eng": "Mesosiderite-B",
+                                "fr": "Mésosidérite-B"
+                            },
+                            "classCodes": [
+                                "Mesosiderite-B"
+                            ],
+                            "regex": {
+                                "selfAndChildren": "^Mesosiderite-B.*"
+                            },
+                            "mindat_id": "49912",
+                            "children": [
+                                {
+                                    "name": {
+                                        "eng": "Mesosiderite-B1",
+                                        "fr": "Mésosidérite-B1"
+                                    },
+                                    "classCodes": [
+                                        "Mesosiderite-B1"
+                                    ],
+                                    "regex": {
+                                        "selfAndChildren": "^Mesosiderite-B1.*"
+                                    },
+                                    "mindat_id": "49913"
+                                },
+                                {
+                                    "name": {
+                                        "eng": "Mesosiderite-B2",
+                                        "fr": "Mésosidérite-B2"
+                                    },
+                                    "classCodes": [
+                                        "Mesosiderite-B2"
+                                    ],
+                                    "regex": {
+                                        "selfAndChildren": "^Mesosiderite-B2.*"
+                                    },
+                                    "mindat_id": "49914"
+                                },
+                                {
+                                    "name": {
+                                        "eng": "Mesosiderite-B3",
+                                        "fr": "Mésosidérite-B3"
+                                    },
+                                    "classCodes": [
+                                        "Mesosiderite-B3"
+                                    ],
+                                    "regex": {
+                                        "selfAndChildren": "^Mesosiderite-B3.*"
+                                    },
+                                    "mindat_id": "49915"
+                                },
+                                {
+                                    "name": {
+                                        "eng": "Mesosiderite-B4",
+                                        "fr": "Mésosidérite-B4"
+                                    },
+                                    "classCodes": [
+                                        "Mesosiderite-B4"
+                                    ],
+                                    "regex": {
+                                        "selfAndChildren": "^Mesosiderite-B4.*"
+                                    },
+                                    "mindat_id": "49916"
+                                }
+                            ]
+                        },
+                        {
+                            "name": {
+                                "eng": "Mesosiderite-C",
+                                "fr": "Mésosidérite-C"
+                            },
+                            "classCodes": [
+                                "Mesosiderite-C"
+                            ],
+                            "regex": {
+                                "selfAndChildren": "^Mesosiderite-C.*"
+                            },
+                            "mindat_id": "49917",
+                            "children": [
+                                {
+                                    "name": {
+                                        "eng": "Mesosiderite-C2",
+                                        "fr": "Mésosidérite-C2"
+                                    },
+                                    "classCodes": [
+                                        "Mesosiderite-C2"
+                                    ],
+                                    "regex": {
+                                        "selfAndChildren": "^Mesosiderite-C2.*"
+                                    },
+                                    "mindat_id": "49918"
+                                }
+                            ]
+                        },
+                        {
+                            "name": {
+                                "eng": "Anomalous mesosiderite",
+                                "fr": "Mésosidérite anormale"
+                            },
+                            "classCodes": [
+                                "Mesosiderite-an"
+                            ],
+                            "regex": {
+                                "selfAndChildren": "^Mesosiderite-an"
+                            },
+                            "mindat_id": "49911"
+                        },
+                        {
+                            "name": {
+                                "eng": "Possibly mesosiderite",
+                                "fr": "Possiblement mésosidérite"
+                            },
+                            "classCodes": [
+                                "Mesosiderite?"
+                            ],
+                            "regex": {
+                                "selfAndChildren": "^Mesosiderite?"
+                            },
+                            "mindat_id": ""
+                        }
+                    ]
+                },
+                {
+                    "name": {
+                        "eng": "Pallasite",
+                        "fr": "Pallasite"
+                    },
+                    "description": {
+                        "eng": "A meteorite that is a mixture of metal and silicates (usually olivine grains).",
+                        "fr": ""
+                    },
+                    "classCodes": [
+                        "Pallasite"
+                    ],
+                    "regex": {
+                        "selfAndChildren": "^Pallasite.*"
+                    },
+                    "mindat_id": "49898",
+                    "children": [
+                        {
+                            "name": {
+                                "eng": "PES pallasite",
+                                "fr": "Pallasite PES"
+                            },
+                            "description": {
+                                "eng": "A pallasite belonging to the Eagle Station chemical group",
+                                "fr": ""
+                            },
+                            "classCodes": [
+                                "Pallasite, PES"
+                            ],
+                            "regex": {
+                                "selfAndChildren": "^Pallasite, PES.*"
+                            },
+                            "mindat_id": "49902"
+                        },
+                        {
+                            "name": {
+                                "eng": "PMG pallasite",
+                                "fr": "Pallasite PMG"
+                            },
+                            "description": {
+                                "eng": "A pallasite belonging to the main chemical group.",
+                                "fr": ""
+                            },
+                            "classCodes": [
+                                "Pallasite, PMG"
+                            ],
+                            "regex": {
+                                "selfAndChildren": "^Pallasite, PMG.*"
+                            },
+                            "mindat_id": "49899",
+                            "children": [
+                                {
+                                    "name": {
+                                        "eng": "Anorthositic PMG pallasite ",
+                                        "fr": "Pallasite PMG anorthositique"
+                                    },
+                                    "classCodes": [
+                                        "Pallasite, PMG-an"
+                                    ],
+                                    "regex": {
+                                        "selfAndChildren": "^Pallasite, PMG-an.*"
+                                    },
+                                    "mindat_id": "49901"
+                                }
+                            ]
+                        },
+                        {
+                            "name": {
+                                "eng": "Pyroxene pallasite",
+                                "fr": "Pallasite à pyroxène"
+                            },
+                            "description": {
+                                "eng": "A pallasite containing pyroxene as inclusions in the olivine crystals, as large grains in the nickel-iron matrix and as grains bordering the olivines.",
+                                "fr": ""
+                            },
+                            "classCodes": [],
+                            "exclude": true,
+                            "mindat_id": "49904"
+                        },
+                        {
+                            "name": {
+                                "eng": "Ungrouped pallasite",
+                                "fr": "Pallasite non-groupée"
+                            },
+                            "description": {
+                                "eng": "A pallasite that is neither a member of the main group nor the Eagle Station grouplet, and is therefore ungrouped.",
+                                "fr": ""
+                            },
+                            "classCodes": [
+                                "Pallasite, ungrouped"
+                            ],
+                            "regex": {
+                                "selfAndChildren": "^Pallasite, ungrouped.*"
+                            },
+                            "mindat_id": "49904"
+                        },
+                        {
+                            "name": {
+                                "eng": "Possibly pallasite",
+                                "fr": "Possiblement pallasite"
+                            },
+                            "description": {
+                                "eng": "",
+                                "fr": ""
+                            },
+                            "classCodes": [
+                                "Pallasite?"
+                            ],
+                            "regex": {
+                                "selfAndChildren": "^Pallasite?"
+                            },
+                            "mindat_id": ""
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

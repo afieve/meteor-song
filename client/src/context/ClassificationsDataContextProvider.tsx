@@ -10,6 +10,7 @@ interface ClassificationsDataContextType {
     selectClassification: (classificationId: string) => void;
     deselectClassification: (classificationId: string) => void;
     isClassificationSelected: (classificationId: string) => boolean;
+    // getClassificationDescription: (recclass: string) => {recclass: string, eng: string, fr: string};//~ À implémenter
     // selectedClassifications: Set<string>;
     error: string | null;
 }
@@ -189,6 +190,18 @@ export function ClassificationsDataContextProvider({ children }: DataProviderPro
         }, 3000); // Délai de 5 secondes
         setUpdateTimeout(timeout);
     };
+    /*//~ À implémenter
+    const getClassificationDescription = async (recclass: string) => {
+        try {
+
+            const classificationDescription = await classificationsAPI.getDescription(recclass);
+            return classificationDescription;
+
+        } catch (err) {
+
+        }
+    }
+    */
 
 
 
@@ -201,6 +214,7 @@ export function ClassificationsDataContextProvider({ children }: DataProviderPro
                 selectClassification,
                 deselectClassification,
                 isClassificationSelected,
+                // getClassificationDescription,//~ À implémenter
                 error,
             }}
         >

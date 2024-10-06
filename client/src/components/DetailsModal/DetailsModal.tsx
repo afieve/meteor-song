@@ -13,6 +13,8 @@ export default function DetailsModal() {
     const modalIsOpen = useSelector((state: RootState) => state.meteoriteDetailsModal.isOpen);
     const dispatch = useDispatch();
 
+    
+
     return (
         <div id="met-details-modal">
             <div id="met-details-modal-header">
