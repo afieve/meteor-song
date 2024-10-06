@@ -28,6 +28,12 @@
         },
         "api/index.ts": {
             "maxDuration": 50
+        },
+        "index.js": {
+            "maxDuration": 50
+        },
+        "index.ts": {
+            "maxDuration": 50
         }
     }
 }
