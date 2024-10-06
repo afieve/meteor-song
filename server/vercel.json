@@ -20,19 +20,7 @@
         }
     ],
     "functions": {
-<<<<<<< HEAD
-=======
-        "dist/api/index.js":{
-            "maxDuration": 50
-        },
->>>>>>> a818e88f0ddc40cd748c1b6000e6a698ef27d710
         "api/index.ts": {
-            "maxDuration": 50
-        },
-        "index.js": {
-            "maxDuration": 50
-        },
-        "index.ts": {
             "maxDuration": 50
         }
     }
