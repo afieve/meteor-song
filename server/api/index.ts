@@ -111,4 +111,4 @@ app.listen(PORT, () => {
     logger.info(`Le serveur est lancé sur le port ${PORT}.`)
 })
 
-export const handler = serverless(app);
+export default serverless(app);
