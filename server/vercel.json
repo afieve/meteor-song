@@ -20,9 +20,6 @@
         }
     ],
     "functions": {
-        "api/index.js": {
-            "maxDuration": 50
-        },
         "dist/api/index.js":{
             "maxDuration": 50
         },
