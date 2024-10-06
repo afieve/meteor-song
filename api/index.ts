@@ -18,7 +18,7 @@ app.use(cors({
 }));
 
 
-app.set('view engine', 'pug');
+// app.set('view engine', 'pug');
 app.use(helmet());
 
 // Middleware CORS custom

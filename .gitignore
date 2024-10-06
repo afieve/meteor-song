@@ -6,6 +6,7 @@ node_modules/
 
 # production files
 /server/dist/
+/api/dist/
 /client/dist/
 
 # test data
