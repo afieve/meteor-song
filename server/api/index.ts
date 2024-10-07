@@ -20,8 +20,6 @@ app.use(cors({
     origin: process.env.CLIENT_APP_ORIGIN_URL
 }));
 */
-
-// app.set('view engine', 'pug');
 app.use(helmet());
 app.use(express.json()); // Pour parser le JSON dans les requêtes
 
@@ -41,12 +39,6 @@ app.use((req, res, next) => {
 });
 */
 
-// app.use( (req, res, next) => {
-//     res.header("Access-Control-Allow-Origin", process.env.CLIENT_APP_ORIGIN_URL);
-//     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-//     next();
-// });
-
 // Connexion à MongoDB
 let isConnected: boolean = false;
 const connectToDatabase = async () => {
@@ -54,6 +46,7 @@ const connectToDatabase = async () => {
         return;
     }
     try {
+        logger.info("trying to connect to MongoDB cluster...");
         await mongoose.connect(process.env.MONGODB_CONNECTION_STRING.toString());
         isConnected = true;
         logger.info("Serveur connecté à la base de données MongoDB meteor_song")
