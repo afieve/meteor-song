@@ -10,7 +10,6 @@ import mlRoutes from "../src/routes/meteoriteLandingsRoutes";
 import classifRoutes from "../src/routes/classificationsRoutes";
 import colorRoutes from "../src/routes/colorRoutes";
 
-
 const logger = pino();
 const app = express();
 const PORT: number = parseInt(process.env.SERVER_PORT);
@@ -39,22 +38,7 @@ app.use((req, res, next) => {
 });
 */
 
-// Connexion à MongoDB
-let isConnected: boolean = false;
-const connectToDatabase = async () => {
-    if (isConnected) {
-        return;
-    }
-    try {
-        logger.info("trying to connect to MongoDB cluster...");
-        await mongoose.connect(process.env.MONGODB_CONNECTION_STRING.toString());
-        isConnected = true;
-        logger.info("Serveur connecté à la base de données MongoDB meteor_song")
-    } catch (err) {
-        logger.error("Erreur de connexion à MongoDB:", err);
-    }
-}
-connectToDatabase();
+
 
 
 // mongoose.connect(process.env.MONGODB_CONNECTION_STRING.toString());
@@ -102,7 +86,26 @@ app.use((req, res, next) => {
 
 app.listen(PORT, () => {
     logger.info(`Le serveur est lancé sur le port ${PORT}.`)
-})
+});
+
+
+// Connexion à MongoDB
+let isConnected: boolean = false;
+const connectToDatabase = async () => {
+    if (isConnected) {
+        return;
+    }
+    try {
+        logger.info("trying to connect to MongoDB cluster...");
+        await mongoose.connect(process.env.MONGODB_CONNECTION_STRING.toString());
+        isConnected = true;
+        logger.info("Serveur connecté à la base de données MongoDB meteor_song")
+    } catch (err) {
+        logger.error("Erreur de connexion à MongoDB:", err);
+    }
+}
+connectToDatabase();
+
 
 // export default serverless(app);
 module.exports = app;
