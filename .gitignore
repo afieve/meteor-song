@@ -14,6 +14,9 @@ node_modules/
 # server data saves
 server/data/saves/
 
+# ignore netlify/functions files
+server/netlify/
+
 # exclude: test images
 img/*
 # include: github preview image

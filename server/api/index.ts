@@ -14,6 +14,28 @@ const logger = pino();
 const app = express();
 const PORT: number = parseInt(process.env.SERVER_PORT);
 
+if (!process.env.MONGODB_CONNECTION_STRING) {
+    throw new Error('MONGODB_CONNECTION_STRING is not defined in environment variables');
+}
+
+// Connexion à MongoDB
+let isConnected: boolean = false;
+const connectToDatabase = async () => {
+    if (isConnected) {
+        return;
+    }
+    try {
+        logger.info("trying to connect to MongoDB cluster...");
+        await mongoose.connect(process.env.MONGODB_CONNECTION_STRING.toString());
+        isConnected = true;
+        logger.info("Serveur connecté à la base de données MongoDB meteor_song")
+    } catch (err) {
+        logger.error("Erreur de connexion à MongoDB:", err);
+    }
+}
+connectToDatabase();
+
+
 /*
 app.use(cors({
     origin: process.env.CLIENT_APP_ORIGIN_URL
@@ -89,22 +111,6 @@ app.listen(PORT, () => {
 });
 
 
-// Connexion à MongoDB
-let isConnected: boolean = false;
-const connectToDatabase = async () => {
-    if (isConnected) {
-        return;
-    }
-    try {
-        logger.info("trying to connect to MongoDB cluster...");
-        await mongoose.connect(process.env.MONGODB_CONNECTION_STRING.toString());
-        isConnected = true;
-        logger.info("Serveur connecté à la base de données MongoDB meteor_song")
-    } catch (err) {
-        logger.error("Erreur de connexion à MongoDB:", err);
-    }
-}
-connectToDatabase();
 
 
 // export default serverless(app);
