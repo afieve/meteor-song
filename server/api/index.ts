@@ -1,77 +1,29 @@
-import mongoose from "mongoose";
 import express from 'express';
 import helmet from 'helmet';
-import 'dotenv/config';
 import cors from 'cors';
 import pino from 'pino';
+import 'dotenv/config';
 // import serverless from "serverless-http";
 
 import mlRoutes from "../src/routes/meteoriteLandingsRoutes";
 import classifRoutes from "../src/routes/classificationsRoutes";
 import colorRoutes from "../src/routes/colorRoutes";
+import errorHandler from "../src/middleware/errorHandler";
+import customCorsMiddleWare from "../src/middleware/cors";
+import { connectToDatabase } from "../src/db/db";
 
 const logger = pino();
 const app = express();
 const PORT: number = parseInt(process.env.SERVER_PORT);
 
-if (!process.env.MONGODB_CONNECTION_STRING) {
-    throw new Error('MONGODB_CONNECTION_STRING is not defined in environment variables');
-}
-
-// Connexion à MongoDB
-let isConnected: boolean = false;
-const connectToDatabase = async () => {
-    if (isConnected) {
-        return;
-    }
-    try {
-        logger.info("trying to connect to MongoDB cluster...");
-        await mongoose.connect(process.env.MONGODB_CONNECTION_STRING.toString());
-        isConnected = true;
-        logger.info("Serveur connecté à la base de données MongoDB meteor_song")
-    } catch (err) {
-        logger.error("Erreur de connexion à MongoDB:", err);
-    }
-}
-connectToDatabase();
-
-
-/*
 app.use(cors({
     origin: process.env.CLIENT_APP_ORIGIN_URL
 }));
-*/
+// Middleware CORS custom
+// app.use(customCorsMiddleWare);
+
 app.use(helmet());
 app.use(express.json()); // Pour parser le JSON dans les requêtes
-
-// Middleware CORS custom
-/*
-app.use((req, res, next) => {
-    const allowedOrigin = process.env.CLIENT_APP_ORIGIN_URL;
-    const origin = req.headers.origin;
-    console.log('request.headers.origin:', origin);
-    if (origin && origin !== allowedOrigin) {
-        return res.status(403).send("Forbidden: Invalid origin.");
-    } else if (!origin) {
-        return res.status(403).send("Forbidden: No origin specified.")
-    }
-    next();
-
-});
-*/
-
-
-
-
-// mongoose.connect(process.env.MONGODB_CONNECTION_STRING.toString());
-// const db = mongoose.connection;
-
-// Connection to the MongoDB database
-// db.once('open', async () => {
-//     // console.log("Connecté à la base de données MongoDB meteor_song");
-//     logger.info("Serveur connecté à la base de données MongoDB meteor_song")
-// });
-
 
 // Reduce fingerprinting: the ability for an external program to determine the software that the server uses. It doesn't prevent sophisticated attacks, only casual exploits.
 app.disable('x-powered-by');
@@ -101,16 +53,27 @@ app.use((req, res) => {
 });
 */
 
+
 app.use((req, res, next) => {
     res.status(404).send("<h1>Error 404</h1>");
     next();
 });
 
+app.use(async (req, res, next ) => {
+    try {
+        await connectToDatabase();
+        next();
+    } catch (err) {
+        logger.error("Erreur lors de la connexion à la base de données:", err);
+        res.status(500).json({error: "Internal Server Error"});
+    }
+});
+
+app.use(errorHandler);
+
 app.listen(PORT, () => {
     logger.info(`Le serveur est lancé sur le port ${PORT}.`)
 });
-
-
 
 
 // export default serverless(app);
