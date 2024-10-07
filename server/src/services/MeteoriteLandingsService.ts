@@ -33,8 +33,9 @@ export async function getAllMeteoriteLandings(params: { geolocated: boolean, mar
     };
 
     try {
-
+        console.log("hello from getAllMeteoriteLandings() : trying to get data...");
         const docs = await MeteoriteLandingModel.find(filter, projection);
+        console.log(docs.length, "documents récupérés dans getAllMeteoriteLandings");
         return docs;
 
     } catch (err) {
