@@ -39,7 +39,7 @@ export async function getAllMeteoriteLandings(params: { geolocated: boolean, mar
         return docs;
 
     } catch (err) {
-        console.log(err);
+        console.log("Erreur lrrs de la récupération de toutes les données de météorites:", err);
     }
 }
 
