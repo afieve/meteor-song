@@ -28,13 +28,6 @@ app.use(express.json()); // Pour parser le JSON dans les requêtes
 // Reduce fingerprinting: the ability for an external program to determine the software that the server uses. It doesn't prevent sophisticated attacks, only casual exploits.
 app.disable('x-powered-by');
 
-app.get("/", (req, res, next) => res.send(`Express on Vercel. Origin: ${req.headers.origin ? req.headers.origin : ""}`));
-
-app.use('/ml', mlRoutes);
-app.use('/classif', classifRoutes);
-app.use('/colors', colorRoutes);
-
-
 /*
 *   # Prevent open redirects
 *   If the user gets redirected here by some malevolant program, this middleware redirects him to the URL he was originally trying to access.
@@ -53,12 +46,6 @@ app.use((req, res) => {
 });
 */
 
-
-app.use((req, res, next) => {
-    res.status(404).send("<h1>Error 404</h1>");
-    next();
-});
-
 app.use(async (req, res, next ) => {
     try {
         await connectToDatabase();
@@ -70,6 +57,17 @@ app.use(async (req, res, next ) => {
 });
 
 app.use(errorHandler);
+
+app.get("/", (req, res, next) => res.send(`Express on Vercel. Origin: ${req.headers.origin ? req.headers.origin : ""}`));
+
+app.use('/ml', mlRoutes);
+app.use('/classif', classifRoutes);
+app.use('/colors', colorRoutes);
+
+app.use((req, res, next) => {
+    res.status(404).send("<h1>Error 404</h1>");
+    next();
+});
 
 app.listen(PORT, () => {
     logger.info(`Le serveur est lancé sur le port ${PORT}.`)
