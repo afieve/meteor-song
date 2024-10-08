@@ -34,9 +34,10 @@ export async function getAllMeteoriteLandings(params: { geolocated: boolean, mar
 
     try {
         console.log("hello from getAllMeteoriteLandings() : trying to get data...");
-        const docs = await MeteoriteLandingModel.find(filter, projection);
-        console.log(docs.length, "documents récupérés dans getAllMeteoriteLandings");
-        return docs;
+        // const docs = await MeteoriteLandingModel.find(filter, projection);
+        // console.log(docs.length, "documents récupérés dans getAllMeteoriteLandings");
+        // return docs;
+        return await MeteoriteLandingModel.find(filter, projection).lean().exec();
 
     } catch (err) {
         console.log("Erreur lrrs de la récupération de toutes les données de météorites:", err);

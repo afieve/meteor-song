@@ -6,11 +6,17 @@ const router = express.Router();
 const logger = pino();
 
 router.post('/', async (req, res) => {
-    logger.info(`${req.headers.origin}: POST "/ml": Demande l'intégralité des données d'atterrissages de météorites.`);
-    const docs = await getAllMeteoriteLandings({ geolocated: true, markersEssentials: false });
-    logger.info(`getAllMeteoriteLandings(): ${docs.length} météorites récupérées dans la base de données.`);
-    res.send(docs);
-    logger.info(`POST "/ml": ${docs.length} météorites renvoyées à ${req.headers.origin}`);
+    try {
+        logger.info(`${req.headers.origin}: POST "/ml": Demande l'intégralité des données d'atterrissages de météorites.`);
+        const docs = await getAllMeteoriteLandings({ geolocated: true, markersEssentials: false });
+        logger.info(`getAllMeteoriteLandings(): ${docs.length} météorites récupérées dans la base de données.`);
+        // res.send(docs);
+        res.status(200).json(docs);
+        logger.info(`POST "/ml": ${docs.length} météorites renvoyées à ${req.headers.origin}`);
+    } catch (err) {
+        logger.error("Erreur sur la route /ml:", err);
+        res.status(500).json({error: "Internal Server Error"});
+    }
 });
 router.get('/get-single-example/:datastroID', async (req, res) => {
     logger.info(`${req.headers.origin}: GET "/ml/get-single-example": Demande une météorite en particulier (EXEMPLE)`);
