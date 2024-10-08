@@ -15,7 +15,11 @@ export const connectToDatabase = async () => {
 
     try {
         logger.info("Connexion à MongoDB...");
-        await mongoose.connect(process.env.MONGODB_CONNECTION_STRING);
+        if (process.env.MONGODB_URI) {
+            await mongoose.connect(process.env.MONGODB_URI);
+        } else {
+            await mongoose.connect(process.env.MONGODB_CONNECTION_STRING);
+        }
         isConnected = true;
         logger.info("Connecté à la base de données MongoDB.");
     } catch (err) {
