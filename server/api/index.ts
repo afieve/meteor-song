@@ -3,7 +3,6 @@ import helmet from 'helmet';
 import cors from 'cors';
 import pino from 'pino';
 import 'dotenv/config';
-// import serverless from "serverless-http";
 
 import mlRoutes from "../src/routes/meteoriteLandingsRoutes";
 import classifRoutes from "../src/routes/classificationsRoutes";
@@ -58,7 +57,7 @@ app.use(async (req, res, next ) => {
 
 app.use(errorHandler);
 
-app.get("/", (req, res, next) => res.send(`Express on Vercel. Origin: ${req.headers.origin ? req.headers.origin : ""}`));
+// app.get("/", (req, res, next) => res.send(`Express on Vercel. Origin: ${req.headers.origin ? req.headers.origin : ""}`));
 
 app.use('/ml', mlRoutes);
 app.use('/classif', classifRoutes);
@@ -74,5 +73,4 @@ app.listen(PORT, () => {
 });
 
 
-// export default serverless(app);
 module.exports = app;

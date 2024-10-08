@@ -10,7 +10,6 @@ router.post('/', async (req, res) => {
         logger.info(`${req.headers.origin}: POST "/ml": Demande l'intégralité des données d'atterrissages de météorites.`);
         const docs = await getAllMeteoriteLandings({ geolocated: true, markersEssentials: false });
         logger.info(`getAllMeteoriteLandings(): ${docs.length} météorites récupérées dans la base de données.`);
-        // res.send(docs);
         res.status(200).json(docs);
         logger.info(`POST "/ml": ${docs.length} météorites renvoyées à ${req.headers.origin}`);
     } catch (err) {

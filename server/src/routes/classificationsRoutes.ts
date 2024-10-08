@@ -2,7 +2,6 @@ import express from 'express';
 import pino from 'pino';
 import { generateAndInsertFullClassificationTreeInDBCollection, getFullClassificationTreeFromCollection } from '../services/ClassificationsService';
 
-
 const router = express.Router();
 const logger = pino();
 
@@ -13,7 +12,6 @@ router.get('/tree', async (req, res) => {
     res.send(classifTree);
     logger.info(`GET "/classif/tree": Arbre de classification renvoyé avec succès à ${req.headers.origin}`);
 });
-
 router.post('/tree', async (req, res) => {
     logger.info(`${req.headers.origin}: POST "/classif/tree": Demande l'arbre de classification.`);
     const classifTree = await getFullClassificationTreeFromCollection();
