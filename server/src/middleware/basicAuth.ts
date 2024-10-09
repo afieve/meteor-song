@@ -5,8 +5,8 @@ import bcrypt from "bcrypt";
 const logger = pino();
 
 
-if (!process.env.ADMIN_USERNAME || !process.env.ADMIN_PASSWORD) {
-    throw new Error('ADMIN_USERNAME and ADMIN_PASSWORD must be defined in environment variables.');
+if (!process.env.ADMIN_USERNAME || !process.env.ADMIN_PASSWORD_HASH) {
+    throw new Error('ADMIN_USERNAME and ADMIN_PASSWORD_HASH must be defined in environment variables.');
 }
 
 
