@@ -1,4 +1,4 @@
-import express from 'express';
+import express, { urlencoded } from 'express';
 import helmet from 'helmet';
 import cors from 'cors';
 import pino from 'pino';
@@ -23,7 +23,7 @@ app.use(cors({
 
 app.use(helmet());
 app.use(express.json()); // Pour parser le JSON dans les requêtes
-
+app.use(express.urlencoded({extended: false}));
 // Reduce fingerprinting: the ability for an external program to determine the software that the server uses. It doesn't prevent sophisticated attacks, only casual exploits.
 app.disable('x-powered-by');
 

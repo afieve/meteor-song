@@ -135,7 +135,7 @@ async function getClassificationChildrenFromCollection(parentId: mongoose.Types.
 
 export async function getFullClassificationTreeFromCollection(): Promise<IClassification> {
 
-    console.log("Obtention de l'arbre complet des classifications depuis la collection `classifications`");
+    console.log("Obtention de l'arbre complet des classifications depuis la collection 'classifications'");
 
     try {
 
@@ -158,6 +158,22 @@ export async function getFullClassificationTreeFromCollection(): Promise<IClassi
         console.log(err);
         throw new Error("Error retrieving classification tree");
     }
+}
+
+export async function getSingleClassificationFromRecclass(recclass:string): Promise<IClassification> {
+    console.log(`Obtention de la classification '${recclass}' depuis la collection 'classifications'`);
+
+    try {
+
+        const classif = await ClassificationModel.findOne({classCodes: recclass}); // Matche les résultats où le tableau 'classCodes', attribut du document, contient la valeur `recclass`
+
+        return classif;
+        
+    } catch (err) {
+        console.log(err);
+        throw new Error("Error getting classification from recclass.");
+    }
+
 }
 
 
