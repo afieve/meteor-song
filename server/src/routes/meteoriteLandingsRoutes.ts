@@ -24,6 +24,14 @@ router.get('/security-test-2', authLimiter, basicAuth, async (req, res) => {
         res.status(500).json({ err: 'Internal Server Error' });
     }
 });
+router.post('/security-test', authLimiter, basicAuth, async (req, res) => {
+    logger.info('POST /ml/security-test-2: Tentative de connexion');
+    try {
+        res.status(200).json({ data: "This is a secured data." })
+    } catch (err) {
+        res.status(500).json({ err: 'Internal Server Error' });
+    }
+});
 router.post('/', async (req, res) => {
     try {
         logger.info(`${req.headers.origin}: POST "/ml": Demande l'intégralité des données d'atterrissages de météorites.`);
