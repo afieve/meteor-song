@@ -7,7 +7,6 @@ import "leaflet/dist/leaflet.css";
 import "./LeafletComponentMap.css";
 import countries from "../data/world_countries.json";
 import { useMeteoriteDataContext } from "../../../context/MeteoriteDataContextProvider";
-// import { IMeteoriteLandingGeoJSONDocument } from "../../../types/MeteoriteLanding";
 import { useDispatch } from "react-redux";
 import { openDetailsModal, setDetailedMeteorite } from "../../../store/slices";
 
@@ -68,7 +67,6 @@ export const LeafletComponentMap: React.FC<MapContainerProps> = ({
 
     // Store
     const dispatch = useDispatch();
-    // const [displayDetailsModal, setDisplayDetailsModal] = useState(false);
 
     // Initialisation de la carte
     const initMap = useCallback(() => {
@@ -136,13 +134,13 @@ export const LeafletComponentMap: React.FC<MapContainerProps> = ({
                 meteoritesLayer.current.addTo(map);
             }
 
-            map.on('zoom', () => {
-                console.log('zoom', map.getZoom());
-            })
+            // map.on('zoom', () => {
+            //     console.log('zoom', map.getZoom());
+            // })
 
             if (center && zoom) {
                 map.setView(center, zoom);
-                console.log('zoom', zoom);
+                // console.log('zoom', zoom);
             } else if (bounds) {
                 map.fitBounds(bounds, boundsOptions);
             }
@@ -184,7 +182,7 @@ export const LeafletComponentMap: React.FC<MapContainerProps> = ({
 
     const updateMeteoritesMarkers = useCallback(() => {
 
-        console.log('from updateMeteoritesMarkers:', filteredMeteorites.length, 'météorites');
+        // console.log('from updateMeteoritesMarkers:', filteredMeteorites.length, 'météorites');
 
         const layerGroup = meteoritesLayer.current;
         layerGroup.clearLayers(); // Vider le calque pour ajouter les nouveaux marqueurs

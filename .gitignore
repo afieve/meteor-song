@@ -17,6 +17,12 @@ server/data/saves/
 # ignore netlify/functions files
 server/netlify/
 
+# obsolete components
+/client/src/components/map/MapGLMeteorMap/
+/client/src/components/map/MeteorMap/
+/client/src/components/map/CustomCircleMarker.tsx
+
+
 # exclude: test images
 img/*
 # include: github preview image

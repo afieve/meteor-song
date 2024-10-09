@@ -51,25 +51,13 @@ const ClassificationFilter: React.FC = () => {
         if (classification.children && classification.children.length > 0) {
 
             let updatedExpanded: IClassificationFilterEntry[] = new Array<IClassificationFilterEntry>(...expandedClassifications);
-            // const updatedExpanded: IClassificationFilterEntry[] = new Array<IClassificationFilterEntry>();
 
             if (classification.uuid) {
-
-                // console.log('from handleClassificationExpansion:', {
-                //     clicked: {
-                //         uuid: classification.uuid,
-                //         classCodes: classification.classCodes,
-                //         children: classification.children.map(child => child.classCodes)
-                //     },
-                //     // updatedExpanded: updatedExpanded
-                // })
 
                 if (updatedExpanded.map(classif => classif.uuid).includes(classification.uuid)) {
                     
                     updatedExpanded = updatedExpanded.filter(classif => classif.uuid !== classification.uuid);
-                    // console.log('from handleClassificationExpansion', {
-                    //     updatedExpanded: updatedExpanded
-                    // })
+                    
                 } else {
                     updatedExpanded.push({ uuid: classification.uuid, classCodes: classification.classCodes });
                 }

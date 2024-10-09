@@ -11,7 +11,6 @@ interface ClassificationsDataContextType {
     deselectClassification: (classificationId: string) => void;
     isClassificationSelected: (classificationId: string) => boolean;
     // getClassificationDescription: (recclass: string) => {recclass: string, eng: string, fr: string};//~ À implémenter
-    // selectedClassifications: Set<string>;
     error: string | null;
 }
 
@@ -60,9 +59,9 @@ export function ClassificationsDataContextProvider({ children }: DataProviderPro
 
     useEffect(() => {
 
-        console.log('from useEffect[selectedClassifications]:', {
-            selectedClassifications: selectedClassifications
-        });
+        // console.log('from useEffect[selectedClassifications]:', {
+        //     selectedClassifications: selectedClassifications
+        // });
         setActiveFilters((prevFilters) => ({
             ...prevFilters,
             classification: selectedClassifications
@@ -83,18 +82,6 @@ export function ClassificationsDataContextProvider({ children }: DataProviderPro
             }
             return updatedSelections;
         });        
-
-        // const updatedSelections: IClassificationFilterEntry[] = new Array<IClassificationFilterEntry>(...selectedClassifications);
-
-        // const classification = findClassificationById(classificationId, classificationsData);
-        // if (classification) {
-        //     console.log('from selectClassification:', {
-        //         updatedSelections: updatedSelections
-        //     });
-        //     selectClassificationWithChildren(classification, updatedSelections);
-        // }
-        // setSelectedClassifications(updatedSelections);
-        // triggerUpdateDelay();
     };
 
     // Désélection d'une classification, incluant la propagation aux enfants
@@ -111,24 +98,7 @@ export function ClassificationsDataContextProvider({ children }: DataProviderPro
             }
             return updatedSelections;
 
-        })
-
-        // const classification = findClassificationById(classificationId, classificationsData);
-        // console.log('from deselectClassification', {
-        //     classification: classification
-        // })
-        // if (classification) {
-        //     console.log('from deselectClassification:', '-- BEFORE deselectClassificationWithChildren --', {
-        //         classification: classification,
-        //         updatedSelections: updatedSelections
-        //     });
-        //     updatedSelections = deselectClassificationWithChildren(classification, updatedSelections);
-        // }
-        // console.log('from deselectClassification', '-- AFTER deselectClassificationWithChildren --', {
-        //     updatedSelections: updatedSelections
-        // })
-        // setSelectedClassifications(updatedSelections);
-        // triggerUpdateDelay();
+        });
     };
 
     // Vérifie si une classification est sélectionnée
@@ -165,7 +135,6 @@ export function ClassificationsDataContextProvider({ children }: DataProviderPro
         if (classification.uuid === uuid) {
             return classification;
         }
-
         if (classification.children) {
             for (const child of classification.children) {
                 const found = findClassificationById(uuid, child);
@@ -174,7 +143,6 @@ export function ClassificationsDataContextProvider({ children }: DataProviderPro
                 }
             }
         }
-
         return null;
     };
 

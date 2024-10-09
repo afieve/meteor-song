@@ -6,10 +6,7 @@ import { useState } from 'react';
 
 export default function DetailsModal() {
 
-
-
     const [modalIsOpen, setModalIsOpen] = useState(false);
-
 
     return (
         <div id="infos-modal">

@@ -31,7 +31,7 @@ export default function Footer({ openPage, setOpenPage }: FooterParams) {
             </div>
             <div className="footer-links">
                 <a href="#">afieve.dev</a>
-                <a href="#">
+                <a href="https://github.com/afieve/meteor-song">
                     <FontAwesomeIcon icon={faGithub} className="icon"/>
                 </a>
                 <a href="#">

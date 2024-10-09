@@ -58,8 +58,7 @@ export function MeteoriteDataContextProvider({ children }: DataProviderProps) {
     }, []);
 
     useEffect(() => {
-
-        /*//~
+        /*
         console.log('activeFilters', {
             classification: activeFilters.classification,
             massRange: activeFilters.massRange,
