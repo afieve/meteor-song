@@ -1,6 +1,8 @@
 import express from 'express';
 import pino from 'pino';
 import { generateAndInsertFullClassificationTreeInDBCollection, getFullClassificationTreeFromCollection } from '../services/ClassificationsService';
+import authLimiter from '../middleware/authLimiter';
+import basicAuth from '../middleware/basicAuth';
 
 const router = express.Router();
 const logger = pino();
@@ -19,12 +21,12 @@ router.post('/tree', async (req, res) => {
     res.send(classifTree);
     logger.info(`POST "/classif/tree": Arbre de classification renvoyé avec succès à ${req.headers.origin}`);
 });
-router.get('/generate-and-insert', async (req, res) => {
+router.get('/generate-and-insert', authLimiter, basicAuth, async (req, res) => {
     logger.info(`${req.headers.origin}: POST "/classif/generate-and-insert": Demande l'arbre de classification.`);
     const result = await generateAndInsertFullClassificationTreeInDBCollection();
     res.send(result);
 });
-router.post('/generate-and-insert', async (req, res) => {
+router.post('/generate-and-insert', authLimiter, basicAuth, async (req, res) => {
     logger.info(`${req.headers.origin}: POST "/classif/generate-and-insert": Demande l'arbre de classification.`);
     const result = await generateAndInsertFullClassificationTreeInDBCollection();
     res.send(result);
