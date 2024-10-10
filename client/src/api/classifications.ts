@@ -30,7 +30,7 @@ const classifications = {
                 body: JSON.stringify({recclass: recclass})
             });
             const data = await res.json();
-            console.log('from .getSingle =>', data);
+            // console.log('from .getSingle =>', data);
             return data;
             
         } catch (err) {

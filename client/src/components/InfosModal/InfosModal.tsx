@@ -32,7 +32,7 @@ export default function DetailsModal() {
                         <FontAwesomeIcon icon={faInfo} fontSize={25} />
                     </button>
                     {modalIsOpen && (
-                        <h4>Le nom des météorites.</h4>
+                        <h4>{facts[factIndex].title}</h4>
                     )}
                 </div>
                 {modalIsOpen && (
