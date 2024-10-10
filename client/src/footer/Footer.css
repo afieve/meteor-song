@@ -3,8 +3,6 @@ footer {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    /* border: 1px solid purple; */
-    /* height: 2.5rem; */
     margin: 0;
     padding: 0 10px;
     color: var(--dark-theme-text-color);
@@ -17,19 +15,13 @@ footer .footer-page-toggler {
     cursor: pointer;
     height: fit-content;
     gap: 6px;
-    /* border:1px solid orangered; */
     margin: 0;
     padding: 0;
 }
 
 footer .footer-page-toggler p {
-    /* padding-left: 4px; */
     font-size: 14px;
-    /* padding: 0; */
-    /* margin: 5%; */
     margin: 8px 0;
-    /* border:1px solid purple; */
-    /* margin: 0; */
 }
 
 footer .footer-page-toggler .toggler-icon {
@@ -44,7 +36,8 @@ footer .footer-links {
     gap: 8px;
 }
 
-footer .footer-links a {
+footer .footer-links a,
+footer .footer-links span {
     font-size: 14px;
     color: hsl(200, 55%, 50%);
 }

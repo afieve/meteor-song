@@ -30,16 +30,16 @@ export default function Footer({ openPage, setOpenPage }: FooterParams) {
                 </p>
             </div>
             <div className="footer-links">
-                <a href="#">afieve.dev</a>
+                <a href="https://www.afieve.dev">afieve.dev</a>
                 <a href="https://github.com/afieve/meteor-song">
                     <FontAwesomeIcon icon={faGithub} className="icon"/>
                 </a>
-                <a href="#">
+                <a href="https://www.linkedin.com/in/anthony-fieve">
                     <FontAwesomeIcon icon={faLinkedin} className="icon"/>
                 </a>
-                <a href="#">
+                {/* <span>
                     <FontAwesomeIcon icon={faLink} className="icon"/>
-                </a>
+                </span> */}
             </div>
         </footer>
     )
