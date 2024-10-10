@@ -1,8 +1,8 @@
 .RightMenu {
     width: 340px;
-    padding: 8px 24px 0 24px;
+    padding: 8px 24px 0 16px;
     /* padding: 8px; */
-    border:1px solid var(--dark-theme-text-color);
+    /* border-left:1px solid #6a6a6a; */
     /* max-height: 100vh; */
     overflow: scroll;
 }
