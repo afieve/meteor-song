@@ -44,7 +44,10 @@ export default function MeteorPageHeader({ openRightMenu, setOpenRightMenu }: Me
 
                 <div id="space-logs">
                     <FontAwesomeIcon icon={faRobot} id="space-logs-robot-icon" />
-                    <p>{spaceLog.msg}</p>
+                    <p>
+                        {spaceLog.msg}
+                    </p>
+                    {spaceLog.loading && <div id="space-logs-loader"></div>}
                 </div>
 
             </div>

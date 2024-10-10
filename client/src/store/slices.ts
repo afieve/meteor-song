@@ -92,6 +92,12 @@ export const spaceLogSlice = createSlice({
             // state = {msg: action.payload.msg, loading: action.payload.loading};
             state.msg = action.payload.msg
             state.loading = action.payload.loading;
+        },
+        appendToSpaceLog: (state, action: PayloadAction<string>) => {
+            let baseMessage = state.msg.split(/\d+?\s\/+?\s+\d+$|\d+\/+\d+$/gm)[0];
+            if (baseMessage) {
+                state.msg = `${baseMessage} ${action.payload}`;
+            }
         }
     }
 });
@@ -116,7 +122,7 @@ export const filtersInputsSlice = createSlice({
 export const { toggleTheme, setTheme } = themeSlice.actions;
 export const { clearDetailedMeteorite, setDetailedMeteorite } = detailedMeteoriteSlice.actions;
 export const { openDetailsModal, closeDetailsModal, toggleOpenCloseDetailsModal } = meteoriteDetailsModalSlice.actions;
-export const { setSpaceLog } = spaceLogSlice.actions;
+export const { setSpaceLog, appendToSpaceLog } = spaceLogSlice.actions;
 export const {setFiltersInputsAreDisabled} = filtersInputsSlice.actions;
 
 export const rootReducer = {

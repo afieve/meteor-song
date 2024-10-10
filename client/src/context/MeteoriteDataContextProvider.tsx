@@ -108,13 +108,14 @@ export function MeteoriteDataContextProvider({ children }: DataProviderProps) {
 
     }, [meteoritesData, activeFilters]);
 
+    /*//~ À supprimer si le dispatch fonctionne dans le composant de rendu de la carte
     useEffect(() => {
         if (filteredMeteorites.length > 0) {
             dispatch(setSpaceLog({ msg: `Les ${filteredMeteorites.length} météorites correspondant aux filtres sont désormais affichées.`, loading: false }));
             dispatch(setFiltersInputsAreDisabled(false));
         }
     }, [filteredMeteorites, dispatch]);
-
+    */
     return (
         <MeteoriteDataContext.Provider value={{ meteoritesData, activeFilters, setActiveFilters, filteredMeteorites, error }}>
             {children}

@@ -39,7 +39,7 @@ header .header-right #open-right-menu-button {
     /* background-color: pink; */
     color: var(--dark-theme-button-color);
     background-color: #0D0D0D;
-    
+
 }
 
 header .header-right #open-right-menu-button .icon {
@@ -62,20 +62,23 @@ header .header-right #open-right-menu-button .icon {
     border-radius: 40px;
     cursor: pointer;
 }
+
 .switch-container.dark {
     background-color: var(--dark-theme-bg-color);
     border: 2px solid var(--dark-theme-button-bg-color);
 }
+
 .switch-container .ball {
     width: 40px;
-    height:inherit;
+    height: inherit;
     text-align: center;
     border-radius: 100%;
 }
+
 .switch-container .ball.dark {
-    
+
     background-color: var(--dark-theme-button-bg-color);
-    
+
     transform: translateX(40px);
     animation-duration: 400ms;
     animation-direction: backwards;
@@ -84,6 +87,7 @@ header .header-right #open-right-menu-button .icon {
     animation-fill-mode: backwards;
     animation-name: toggleThemeAnim;
 }
+
 .switch-container .ball.light {
     animation-duration: 400ms;
     animation-direction: forwards;
@@ -92,10 +96,12 @@ header .header-right #open-right-menu-button .icon {
     animation-fill-mode: forwards;
     animation-name: toggleThemeAnim;
 }
+
 @keyframes toggleThemeAnim {
     from {
         background-color: hsl(221, 47%, 12%);
     }
+
     to {
         background-color: hsl(51, 78%, 74%);
         transform: translateX(0);
@@ -106,8 +112,9 @@ header .header-right #open-right-menu-button .icon {
 .switch-container .ball svg {
     margin-top: 11px;
     background-color: transparent;
-    color:hsl(44, 92%, 38%);
+    color: hsl(44, 92%, 38%);
 }
+
 .switch-container .ball span {
     background-color: red;
 
@@ -126,12 +133,46 @@ header .header-right #open-right-menu-button .icon {
     align-items: center;
     gap: 8px;
 }
+
 #space-logs-robot-icon path {
-    fill:var(--dark-theme-text-color);
+    fill: var(--dark-theme-text-color);
 }
+
 #space-logs p {
     padding-top: 2px;
     font-family: "Rajdhani", monospace;
     font-size: 17px;
     color: var(--dark-theme-text-color);
+}
+
+/* SPACE LOGS CSS LOADER */
+#space-logs div#space-logs-loader {
+    margin: 0;
+    margin-left: 6px;
+    width: 16px;
+    height: 16px;
+    border-radius: 100%;
+    background-color: hsl(16, 100%, 75%);
+    animation-name: glow;
+    animation-duration: 0.8s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes load {
+    0% {
+        width: 16px;
+    }
+    50% {
+        width: 40px;
+    }
+}
+@keyframes glow {
+    0% {
+        /* width: 16px; */
+        box-shadow: 0px 0px 6px hsl(16, 100%, 55%);
+    }
+    100% {
+        box-shadow: 0px 0px 14px hsl(16, 100%, 55%);
+    }
 }

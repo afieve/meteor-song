@@ -8,8 +8,8 @@ import "./LeafletComponentMap.css";
 import countries from "../data/world_countries.json";
 import { useMeteoriteDataContext } from "../../../context/MeteoriteDataContextProvider";
 import { useDispatch } from "react-redux";
-import { openDetailsModal, setDetailedMeteorite } from "../../../store/slices";
-import CustomCircleMarker from "../CustomCircleMarker";
+import { appendToSpaceLog, openDetailsModal, setDetailedMeteorite, setFiltersInputsAreDisabled, setSpaceLog } from "../../../store/slices";
+// import CustomCircleMarker from "../CustomCircleMarker";
 
 type ControlledLayer = {
     addLayer(layer: L.Layer): void;
@@ -189,39 +189,67 @@ export const LeafletComponentMap: React.FC<MapContainerProps> = ({
         layerGroup.clearLayers(); // Vider le calque pour ajouter les nouveaux marqueurs
         clusterGroupRef.current?.clearLayers(); // Vider le groupe de cluster s'il existe
 
-        // Ajouter un marqueur pour chaque météorite filtrée
-        filteredMeteorites.forEach((meteorite, index) => {
-            if (meteorite.geometry.coordinates && meteorite.properties.mass && meteorite.properties.name && meteorite.properties.recclass) {
-                const markerOptions = customCircleMarkerOptions(meteorite.properties.recclass)
-                const marker = L.circleMarker(meteorite.geometry.coordinates, markerOptions)
-                    .bindPopup(`
-                        <div class='marker-popup'>
-                            <p><b>${meteorite.properties.name}</b></p>
-                            <p>Classe: <span style="color: ${markerOptions.color}; font-weight: 600;">${meteorite.properties.recclass}</span></p>
-                            <button class="info-btn" data-id="${index}">En savoir plus</button>
-                        </div>
-                    `);
+        // Définir la taille d'un lot de marqueurs à rendre
+        const batchSize = filteredMeteorites.length >= 500 ? 500 
+            : filteredMeteorites.length >= 100 ? 50
+            : filteredMeteorites.length >= 50 ? 25
+            : filteredMeteorites.length >= 25 ? 5
+            : 1;
+        let currentIndex = 0;
 
-                // Utiliser l'événement 'popupopen' pour gérer les clics sur le bouton info
-                marker.on('popupopen', (event) => {
+        const addMarkersBatch = () => {
+            const endIndex = Math.min(currentIndex + batchSize, filteredMeteorites.length);
 
-                    const infoButton = event.popup.getElement()?.querySelector('.info-btn') as HTMLElement | null;
+            // Ajouter un lot de marqueurs
+            for (let i = currentIndex; i < endIndex; i++) {
+                const meteorite = filteredMeteorites[i];
 
-                    if (infoButton && markerOptions.color) {
-                        infoButton.onclick = () => {
-                            dispatch(setDetailedMeteorite({meteorite: meteorite, classColor: markerOptions.color}));
-                            dispatch(openDetailsModal());
-                        };
+                if (meteorite.geometry.coordinates && meteorite.properties.mass && meteorite.properties.name && meteorite.properties.recclass) {
+                    const markerOptions = customCircleMarkerOptions(meteorite.properties.recclass)
+                    const marker = L.circleMarker(meteorite.geometry.coordinates, markerOptions)
+                        .bindPopup(`
+                            <div class='marker-popup'>
+                                <p><b>${meteorite.properties.name}</b></p>
+                                <p>Classe: <span style="color: ${markerOptions.color}; font-weight: 600;">${meteorite.properties.recclass}</span></p>
+                                <button class="info-btn" data-id="${i}">En savoir plus</button>
+                            </div>
+                        `);
+
+                    // Utiliser l'événement 'popupopen' pour gérer les clics sur le bouton info
+                    marker.on('popupopen', (event) => {
+
+                        const infoButton = event.popup.getElement()?.querySelector('.info-btn') as HTMLElement | null;
+
+                        if (infoButton && markerOptions.color) {
+                            infoButton.onclick = () => {
+                                dispatch(setDetailedMeteorite({ meteorite: meteorite, classColor: markerOptions.color }));
+                                dispatch(openDetailsModal());
+                            };
+                        }
+                    });
+
+                    layerGroup.addLayer(marker);
+
+                    if (clustersAreActive) {
+                        clusterGroupRef.current?.addLayer(marker);
                     }
-                });
-
-                layerGroup.addLayer(marker);
-
-                if (clustersAreActive) {
-                    clusterGroupRef.current?.addLayer(marker);
                 }
             }
-        });
+
+            currentIndex = endIndex;
+            
+            if (currentIndex < filteredMeteorites.length) {
+                setTimeout(addMarkersBatch, 0);
+                dispatch(appendToSpaceLog(`${currentIndex}/${filteredMeteorites.length}`));
+            } else  {
+                dispatch(setSpaceLog({ msg: `Les ${filteredMeteorites.length} météorites correspondant aux filtres sont désormais affichées.`, loading: false }));
+                dispatch(setFiltersInputsAreDisabled(false));
+            } 
+    
+        };
+
+        addMarkersBatch();
+
     }, [filteredMeteorites, customCircleMarkerOptions, clustersAreActive, dispatch]);
 
     // Supprimer la carte lors du démontage du composant
