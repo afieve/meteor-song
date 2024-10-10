@@ -1,9 +1,12 @@
 :root {
     --dark-theme-background-color: #060606;
-    --light-theme-background-color: hsl(0, 0%, 96%);
+    --dark-theme-filter-title-color: #D0D0D0;
+    --dark-theme-text-color: #DBDBDB;
     --dark-theme-button-bg-color: #191919;
+    --dark-theme-button-color: #E0E0E0;
+
+    --light-theme-background-color: hsl(0, 0%, 96%);
     --light-theme-button-color: #E0E0E0;
-    --dark-theme-text-color: #dbdbdb;
 }
 .App {
     display: flex;

@@ -17,14 +17,20 @@ const classifications = {
             throw err;
         }
     },
-    getDescription: async (recclass:string) => {
+    getSingle: async (recclass:string) => {
+        // console.log('input:', recclass);
         try {
             const res = await fetch(`${process.env.REACT_APP_SERVER_URL}/classif/get-single`, {
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
                 method: "POST",
                 mode: "cors",
                 body: JSON.stringify({recclass: recclass})
             });
             const data = await res.json();
+            console.log('from .getSingle =>', data);
             return data;
             
         } catch (err) {

@@ -26,10 +26,12 @@ export const themeSlice = createSlice({
 // DETAILED METEORITE
 interface DetailedMeteoriteState {
     meteorite: IMeteoriteLandingGeoJSONDocument | null;
+    classColor: string | null;
 }
 
 const initialDetailedMeteoriteState: DetailedMeteoriteState = {
-    meteorite: null
+    meteorite: null,
+    classColor: null
 }
 
 export const detailedMeteoriteSlice = createSlice({
@@ -38,9 +40,11 @@ export const detailedMeteoriteSlice = createSlice({
     reducers: {
         clearDetailedMeteorite: (state) => {
             state.meteorite = null;
+            state.classColor = null
         },
-        setDetailedMeteorite: (state, action: PayloadAction<IMeteoriteLandingGeoJSONDocument>) => {
-            state.meteorite = action.payload;
+        setDetailedMeteorite: (state, action: PayloadAction<DetailedMeteoriteState>) => {
+            state.meteorite = action.payload.meteorite;
+            state.classColor = action.payload.classColor;
         }
     }
 });
@@ -66,18 +70,59 @@ export const meteoriteDetailsModalSlice = createSlice({
         },
         toggleOpenCloseDetailsModal: (state) => {
             state.isOpen = state.isOpen ? false : true;
-        } 
+        }
     }
 });
 
+// SPACE LOG
+interface SpaceLogState {
+    msg: string;
+    loading: boolean;
+}
+const initialSpaceLogState: SpaceLogState = {
+    msg: "Chargement initial des données...",
+    loading: true
+}
 
+export const spaceLogSlice = createSlice({
+    name: 'spaceLogState',
+    initialState: initialSpaceLogState,
+    reducers: {
+        setSpaceLog: (state, action: PayloadAction<SpaceLogState>) => {
+            // state = {msg: action.payload.msg, loading: action.payload.loading};
+            state.msg = action.payload.msg
+            state.loading = action.payload.loading;
+        }
+    }
+});
+
+// FILTERS INPUTS
+interface FiltersInputsState {
+    disabled: boolean;
+}
+const initialFiltersInputsState: FiltersInputsState = {
+    disabled: true
+}
+export const filtersInputsSlice = createSlice({
+    name: 'filtersInputsState',
+    initialState: initialFiltersInputsState,
+    reducers: {
+        setFiltersInputsAreDisabled: (state, action: PayloadAction<boolean>) => {
+            state.disabled = action.payload;
+        }
+    }
+})
 
 export const { toggleTheme, setTheme } = themeSlice.actions;
 export const { clearDetailedMeteorite, setDetailedMeteorite } = detailedMeteoriteSlice.actions;
 export const { openDetailsModal, closeDetailsModal, toggleOpenCloseDetailsModal } = meteoriteDetailsModalSlice.actions;
+export const { setSpaceLog } = spaceLogSlice.actions;
+export const {setFiltersInputsAreDisabled} = filtersInputsSlice.actions;
 
 export const rootReducer = {
     theme: themeSlice.reducer,
     detailedMeteorite: detailedMeteoriteSlice.reducer,
-    meteoriteDetailsModal: meteoriteDetailsModalSlice.reducer
+    meteoriteDetailsModal: meteoriteDetailsModalSlice.reducer,
+    spaceLog: spaceLogSlice.reducer,
+    filtersInputsState: filtersInputsSlice.reducer
 };

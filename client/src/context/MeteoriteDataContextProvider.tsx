@@ -2,6 +2,8 @@ import { createContext, ReactNode, useContext, useEffect, useMemo, useState } fr
 import meteoriteLandingsAPI from "../api/meteoriteLandings";
 import { IMeteoriteLandingGeoJSONDocument } from "../types/MeteoriteLanding";
 import { Filters } from "../types/Filters";
+import { useDispatch } from "react-redux";
+import { setFiltersInputsAreDisabled, setSpaceLog } from "../store/slices";
 
 interface MeteoriteDataContextType {
     meteoritesData: IMeteoriteLandingGeoJSONDocument[];
@@ -42,7 +44,7 @@ export function MeteoriteDataContextProvider({ children }: DataProviderProps) {
         yearRange: [1400, 2020]
     });
     const [error, setError] = useState<string | null>(null);
-
+    const dispatch = useDispatch();
 
     // Simulatation de la récupération de données lors du chargement de l'application
     useEffect(() => {
@@ -65,7 +67,12 @@ export function MeteoriteDataContextProvider({ children }: DataProviderProps) {
             yearRange: activeFilters.yearRange
         })
         */
-    }, [activeFilters])
+        if (activeFilters.classification.length > 0) {
+            dispatch(setFiltersInputsAreDisabled(true));
+            dispatch(setSpaceLog({ msg: "Filtrage des météorites par classification...", loading: true }));
+        }
+
+    }, [activeFilters, dispatch])
 
 
     // Utilisation de useMemo pour ne recalculer les météorites affichées que lorsque les filtres sélectionnés par l'utilisateur changent
@@ -85,7 +92,7 @@ export function MeteoriteDataContextProvider({ children }: DataProviderProps) {
             matches.classification = recclass
                 ? activeFilters.classification.length === 0 || activeFilters.classification.map(classification => classification.classCodes ? classification.classCodes[0] : null).includes(recclass)
                 : activeFilters.classification.length === 0;
-                
+
             matches.mass = mass
                 ? mass >= activeFilters.massRange[0] && mass <= activeFilters.massRange[1]
                 // Si la météorite n'a pas d'attribut `mass`, on ne l'affiche que si le filtre de masse est réglé sur ses valeurs min et max par défaut
@@ -100,6 +107,13 @@ export function MeteoriteDataContextProvider({ children }: DataProviderProps) {
         })
 
     }, [meteoritesData, activeFilters]);
+
+    useEffect(() => {
+        if (filteredMeteorites.length > 0) {
+            dispatch(setSpaceLog({ msg: `Les ${filteredMeteorites.length} météorites correspondant aux filtres sont désormais affichées.`, loading: false }));
+            dispatch(setFiltersInputsAreDisabled(false));
+        }
+    }, [filteredMeteorites, dispatch]);
 
     return (
         <MeteoriteDataContext.Provider value={{ meteoritesData, activeFilters, setActiveFilters, filteredMeteorites, error }}>

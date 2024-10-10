@@ -16,6 +16,7 @@ header .header-left {
     align-items: center;
     gap: 24px;
     padding: 12px;
+    padding-left: 26px;
     /* color: var(--dark-theme-text-color); */
     /* background-color: rgb(218, 1%, 241); */
 }
@@ -31,20 +32,21 @@ header .header-right {
     /* background-color: palevioletred; */
 }
 
-header .header-right .open-right-menu-button {
+header .header-right #open-right-menu-button {
     /* margin: 0; */
     border: 1px solid grey;
     background-color: var(--dark-theme-button-bg-color);
     /* background-color: pink; */
-    color: var(--light-theme-button-color);
+    color: var(--dark-theme-button-color);
+    background-color: #0D0D0D;
     
 }
 
-header .header-right .open-right-menu-button .icon {
+header .header-right #open-right-menu-button .icon {
     /* color: hsl(0, 0, 12); */
     /* color: var(--light-theme-button-color); */
-    font-size: 24px;
-    margin: 4px;
+    font-size: 23px;
+    margin: 5px 4px;
 
 }
 
@@ -111,8 +113,23 @@ header .header-right .open-right-menu-button .icon {
 
 }
 
+
+/* LOGO AF GRADIENT */
+#logo-af-gradient {
+    box-shadow: inset;
+}
+
 /* SPACE LOGS */
-header .header-left .space-logs p {
+#space-logs {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+}
+#space-logs-robot-icon path {
+    fill:var(--dark-theme-text-color);
+}
+#space-logs p {
     padding-top: 2px;
     font-family: "Rajdhani", monospace;
     font-size: 17px;

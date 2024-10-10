@@ -1,10 +1,31 @@
 .filter-title {
-    color:grey;
+    color: var(--dark-theme-filter-title-color);
+    font-family: 'Instrument Sans', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.classif-filter-list-item {
+    /* border: 1px solid darkcyan; */
+    margin-top: 4px;
+    /* padding: 0; */
+}
+.classif-filter-list-item input {
+    margin-right: 8px;
+    /* padding: 0; */
 }
 .classif-filter-list-item input:hover {
-    cursor:pointer;
+    cursor: pointer;
 }
 .classif-filter-list-item label {
-    color: grey;
-    cursor: pointer;
+    color: var(--dark-theme-filter-title-color);
+    cursor: pointer;   
+}
+.classif-filter-list-item label svg {
+    margin-right: 6px;
+    color: #a0a0a0;
+}
+.classif-filter-list-item label span {
+    margin-right: 6px;
+    color: #d0d0d0;
 }

@@ -42,6 +42,8 @@ export function ClassificationsDataContextProvider({ children }: DataProviderPro
 
     const { activeFilters, setActiveFilters } = useMeteoriteDataContext();
 
+    // const [classificationsFilterInputsAreDisabled, setClassificationsFilterInputsAreDisabled] = useState(false);
+
     // Récupération de données lors du chargement de l'application
     useEffect(() => {
         async function fetchClassificationsData() {
@@ -88,7 +90,8 @@ export function ClassificationsDataContextProvider({ children }: DataProviderPro
     const deselectClassification = (classificationId: string) => {
         if (!classificationsData) return;
 
-        // let updatedSelections: IClassificationFilterEntry[] = new Array<IClassificationFilterEntry>(...selectedClassifications);
+        // setClassificationsFilterInputsAreDisabled(true); // Désactiver "temporairement" les inputs des filtres de classification
+        
         setSelectedClassifications((prevSelectedClassifications) => {
             let updatedSelections = [...prevSelectedClassifications];
 

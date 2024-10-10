@@ -12,13 +12,13 @@ const root = ReactDOM.createRoot(
 );
 root.render(
     // <React.StrictMode>
-    <MeteoriteDataContextProvider>
-        <ClassificationsDataContextProvider>
-            <Provider store={store}>
+    <Provider store={store}>
+        <MeteoriteDataContextProvider>
+            <ClassificationsDataContextProvider>
                 <App />
-            </Provider>
-        </ClassificationsDataContextProvider>
-    </MeteoriteDataContextProvider>
+            </ClassificationsDataContextProvider>
+        </MeteoriteDataContextProvider>
+    </Provider>
     // </React.StrictMode>
 );
 

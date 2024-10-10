@@ -5,7 +5,6 @@
     font-family: 'Instrument Sans', sans-serif;
     border-radius: 8px;
     width: fit-content;
-
 }
 
 #met-details-modal-header {
@@ -14,11 +13,6 @@
     align-items: center;
     justify-content: space-between;
     height: fit-content;
-    /* width: fit-content; */
-    /* background-color: brown; */
-    /* border: 1px dashed brown; */
-    /* gap: 8px; */
-    /* padding-right: 4px; */
 }
 #met-details-modal-header-left {
     display: flex;

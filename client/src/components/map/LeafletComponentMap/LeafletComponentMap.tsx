@@ -9,6 +9,7 @@ import countries from "../data/world_countries.json";
 import { useMeteoriteDataContext } from "../../../context/MeteoriteDataContextProvider";
 import { useDispatch } from "react-redux";
 import { openDetailsModal, setDetailedMeteorite } from "../../../store/slices";
+import CustomCircleMarker from "../CustomCircleMarker";
 
 type ControlledLayer = {
     addLayer(layer: L.Layer): void;
@@ -174,7 +175,7 @@ export const LeafletComponentMap: React.FC<MapContainerProps> = ({
     const customCircleMarkerOptions = useCallback((recclass: string) => (
         {
             radius: 8,
-            color: getMeteoriteColorClass(recclass),
+            color: getMeteoriteColorClass(recclass) || "#FFFFFF",
             weight: 1
         }
     ), [getMeteoriteColorClass]);
@@ -190,13 +191,13 @@ export const LeafletComponentMap: React.FC<MapContainerProps> = ({
 
         // Ajouter un marqueur pour chaque météorite filtrée
         filteredMeteorites.forEach((meteorite, index) => {
-
             if (meteorite.geometry.coordinates && meteorite.properties.mass && meteorite.properties.name && meteorite.properties.recclass) {
-                const marker = L.circleMarker(meteorite.geometry.coordinates, customCircleMarkerOptions(meteorite.properties.recclass))
+                const markerOptions = customCircleMarkerOptions(meteorite.properties.recclass)
+                const marker = L.circleMarker(meteorite.geometry.coordinates, markerOptions)
                     .bindPopup(`
                         <div class='marker-popup'>
                             <p><b>${meteorite.properties.name}</b></p>
-                            <p>Classe: ${meteorite.properties.recclass}</p>
+                            <p>Classe: <span style="color: ${markerOptions.color}; font-weight: 600;">${meteorite.properties.recclass}</span></p>
                             <button class="info-btn" data-id="${index}">En savoir plus</button>
                         </div>
                     `);
@@ -206,9 +207,9 @@ export const LeafletComponentMap: React.FC<MapContainerProps> = ({
 
                     const infoButton = event.popup.getElement()?.querySelector('.info-btn') as HTMLElement | null;
 
-                    if (infoButton) {
+                    if (infoButton && markerOptions.color) {
                         infoButton.onclick = () => {
-                            dispatch(setDetailedMeteorite(meteorite));
+                            dispatch(setDetailedMeteorite({meteorite: meteorite, classColor: markerOptions.color}));
                             dispatch(openDetailsModal());
                         };
                     }
