@@ -1,7 +1,7 @@
 # meteor-song
 
 ![Aperçu d'une interface web cartographique représentant les météorites trouvées sur Terre.](./img/preview_0.1_SPA%203.jpg)
-d
+
 >[!NOTE]
 > Ce projet vise à fournir aux curieux une cartographie des découvertes de météorites, minéraux extra-terrestres trouvés sur le sol de notre planète. Elle leur permettra de les comparer, d'en apprendre plus au sujet de leur composition, de leur classification. Elle fournira également quelques faits et statistiques aux sujets de ces objets fascinants. 
 > 
